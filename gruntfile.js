@@ -8,6 +8,7 @@ module.exports = function (grunt) {
   })
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    clean: [WWW],
     jshint: {
       // define the files to lint
       files: ['Gruntfile.js', SOURCE + 'scripts/*.js'],
@@ -161,6 +162,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('image', ['imagemin:dynamic'])
 
-  grunt.registerTask('dev', ['html', 'css', 'js', 'image', 'connect:server', 'watch'])
+  grunt.registerTask('dev', ['clean', 'html', 'css', 'js', 'image', 'connect:server', 'watch'])
 
 }
