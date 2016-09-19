@@ -34,7 +34,7 @@ module.exports = function (grunt) {
       dist: {
         files: {
           // 对象的key为变量时，需要在外面包上中括号，否则会报错
-          [DEST + 'js/app.js']: '' + SOURCE + 'scripts/app.js'
+          [SOURCE + 'scripts/temp/concat.babel.js']: '' + SOURCE + 'scripts/temp/concat.js'
         }
       }
     },
@@ -43,9 +43,13 @@ module.exports = function (grunt) {
         // define a string to put between each file in the concatenated output
         separator: ''
       },
+      scripts: {
+        src: [SOURCE + 'scripts/data/*.js', SOURCE + 'scripts/app.js'],
+        dest: SOURCE + 'scripts/temp/concat.js'
+      },
       dist: {
         // the files to concatenate
-        src: [SOURCE + 'libs/jquery-1.12.2.js', SOURCE + 'libs/vue.js', SOURCE + 'libs/vue-resource.js', DEST + 'js/app.js'],
+        src: [SOURCE + 'libs/jquery-1.12.2.js', SOURCE + 'libs/vue.js', SOURCE + 'libs/vue-resource.js', SOURCE + 'scripts/temp/concat.babel.js'],
         // the location of the resulting JS file
         dest: DEST + 'js/app.js'
       }
@@ -154,7 +158,7 @@ module.exports = function (grunt) {
   })
 
   // the default task can be run just by typing "grunt" on the command line
-  grunt.registerTask('js', ['jshint', 'babel', 'concat', 'uglify'])
+  grunt.registerTask('js', ['jshint', 'concat:scripts', 'babel', 'concat:dist', 'uglify'])
 
   grunt.registerTask('css', ['less'])
 
