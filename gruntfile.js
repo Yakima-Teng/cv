@@ -49,7 +49,7 @@ module.exports = function (grunt) {
       },
       dist: {
         // the files to concatenate
-        src: [SOURCE + 'libs/jquery-1.12.2.js', SOURCE + 'libs/vue.js', SOURCE + 'libs/vue-resource.js', SOURCE + 'scripts/temp/concat.babel.js'],
+        src: [SOURCE + 'libs/jquery-1.12.2.js', SOURCE + 'libs/vue.js', SOURCE + 'scripts/temp/concat.babel.js'],
         // the location of the resulting JS file
         dest: DEST + 'js/app.js'
       }
