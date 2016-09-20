@@ -5,12 +5,12 @@
  ***********************************************************************************/
 const menus = [
   {
-    title: '技能分布',
-    hash: 'skills',
-  },
-  {
     title: '基本信息',
     hash: 'basic'
+  },
+  {
+    title: '技能分布',
+    hash: 'skills',
   },
   {
     title: '教育经历',
@@ -25,7 +25,7 @@ const menus = [
     hash: 'demos'
   },
   {
-    title: '一些照片',
-    hash: 'photos'
+    title: '看过的书',
+    hash: 'books'
   }
 ]

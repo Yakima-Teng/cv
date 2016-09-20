@@ -1,118 +1,123 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <title>{{homepageTitle}}</title>
-    <meta name="description" content="滕运锋,英文名Yakima Teng,2013年毕业于沈阳药科大学&middot;药学(食品药学方向)专业。博客主要记录了一些生活琐碎、思考感悟,以及药学和IT方面的一些技术文章。">
-    <link rel="shortcut icon" href="img/favicon.ico" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-    <noscript>您的浏览器不支持JavaScript或者JavaScript的运行被您禁止了。</noscript>
-    <link rel="stylesheet" href="css/app.min.css">
+  <meta charset="utf-8">
+  <title>{{homepageTitle}}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="description" content="滕运锋,英文名Yakima Teng,2013年毕业于沈阳药科大学&middot;药学(食品药学方向)专业。博客主要记录了一些生活琐碎、思考感悟,以及药学和IT方面的一些技术文章。">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <noscript>您的浏览器不支持JavaScript或者JavaScript的运行被您禁止了。</noscript>
+  <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body class="transition">
-<header class="page-header">
+  <header class="page-header">
     <nav class="transition">
-        <ul>
-            <li v-for="x in sidebar">
-                <a v-bind:href="'#' + x.url"  v-on:click.prevent="scroll">{{x.txt}}</a>
-            </li>
-        </ul>
+      <ul>
+        <li v-for="x in menus">
+          <a :href="'#' + x.hash"  v-on:click.prevent="scroll">{{x.title}}</a>
+        </li>
+      </ul>
     </nav>
     <h1>{{homepageTitle}}</h1>
-</header>
+  </header>
 
-<article class="page-content">
+  <article class="page-content">
     <div class="page-utilities clearfix text-center">
-        <span class="float-left">{{myChineseName}}</span>
-        <span>{{welcome}}</span>
-        <span class="float-right">{{myEnglishName}}</span>
+      <span class="float-left">滕运锋</span>
+      <span>欢迎</span>
+      <span class="float-right">Yakima Teng</span>
     </div>
-    <section v-for="(index, item) in sidebar" class="page-section">
-        <aside class="section-sidebar">
-            <nav class="menu">
-                <ul>
-                    <li v-for="x in sidebar">
-                        <a v-bind:class="{'active': ($index == index)}" v-bind:href="'#' + x.url" v-on:click.prevent="scroll">{{x.txt}}</a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
-        <article v-bind:id="item.url" class="section-content">
-            <template v-if="$index == 0">
-                <ul class="table-box">
-                    <li v-for="x in introFields">
-                        <span>{{x.title}}</span>
-                        <span>{{x.detail}}</span>
-                    </li>
-                </ul>
-            </template>
-            <template v-if="$index == 1">
-                <ul class="list-box text-center">
-                    <li v-for="item in education">
-                        <ul class="list-item">
-                            <li v-for="(key, value) in item"><span>{{value}}</span></li>
-                        </ul>
-                    </li>
-                </ul>
-            </template>
-            <template v-if="$index == 2">
-                <ul class="shadow-box clearfix">
-                    <li v-for="x in workExperience">
-                        <h3>{{x.company}}</h3>
-                        <ul>
-                            <li>{{x.duration}}</li>
-                            <li>{{x.job}}</li>
-                            <li v-for="item in x.descriptions">{{item}}</li>
-                        </ul>
-                    </li>
-                </ul>
-            </template>
-            <template v-if="$index == 3">
-                <ul class="arrow-box">
-                    <li v-for="x in demos">
-                        <a class="transition" v-bind:href="x.url" v-bind:title="x.description">{{x.txt}}</a>
-                    </li>
-                </ul>
-            </template>
-            <template v-if="$index == 4">
-                <h4 class="text-center">Total: {{numOfBooks}}, and recent 20 are as belows:</h4>
-                <ul class="card-box text-center">
-                    <li v-for="x in books">
-                    <span class="transition">
-                        <img v-bind:src="x.book.images.large" v-bind:alt="x.book.title">
-                        <aside class="transition">{{x.book.isbn13}}</aside>
-                    </span>
-                    </li>
-                </ul>
-            </template>
-            <template v-if="$index == 5">
-                <ul class="container-box text-center">
-                    <li v-for="x in photos">
-                        <img class="transition" v-bind:src="x.url" v-bind:alt="x.description">
-                        <aside class="transition">{{x.description}}</aside>
-                    </li>
-                </ul>
-            </template>
-            <template v-if="$index == 6">
-                <ul class="button-box">
-                    <li class="transition" v-for="x in articles">
-                        <a class="transition" v-bind:href="'/blog/#/posts/' + x['ID']">{{x['post_title']}}</a>
-                    </li>
-                </ul>
-            </template>
-            <template v-if="$index == 7">
-                <div class="big-box text-center">
-                    <h3 class="text-center">{{video.description}}</h3>
-                    <embed v-bind:src="video.url" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
-                </div>
-            </template>
-        </article>
+    <section v-for="(index, item) in menus" class="page-section">
+      <aside class="section-sidebar">
+        <nav class="menu">
+          <ul>
+            <li v-for="x in menus">
+              <a :class="{'active': ($index == index)}" :href="'#' + x.hash" @click.prevent="scroll">{{x.title}}</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <article :id="item.hash" class="section-content">
+        <template v-if="item.hash === 'basic'">
+          <ul class="table-box">
+            <li v-for="x in basic.items">
+              <span>{{x.title}}</span>
+              <span>{{x.detail}}</span>
+            </li>
+          </ul>
+        </template>
+        <template v-if="item.hash === 'skills'">
+          <ul class="arrow-box">
+            <li v-for="x in skills.items">
+              <a class="transition" @click.prevent="" href="##" :style="{width: x.percentage}">{{x.keywords}}</a>
+            </li>
+          </ul>
+        </template>
+        <template v-if="item.hash === 'career'">
+          <ul class="list-box text-center">
+            <li v-for="x in career.items">
+              <ul class="list-item">
+                <li v-for="y in x"><span>{{y}}</span></li>
+              </ul>
+            </li>
+          </ul>
+        </template>
+        <template v-if="item.hash === 'education'">
+          <ul class="shadow-box clearfix">
+            <li v-for="x in education.items">
+              <h3>{{x.title}}</h3>
+              <ul>
+                <li v-for="y in x.details">{{y}}</li>
+              </ul>
+            </li>
+          </ul>
+        </template>
+        <template v-if="item.hash === 'demos'">
+          <ul class="arrow-box">
+            <li v-for="x in demos.items">
+              <header class="header">
+                <span class="left">{{x.title}}</span>
+                <span class="right">{{x.duration}}</span>
+              </header>
+              <article class="article">
+                <section class="left">
+                  <h3 class="skills">
+                    <span v-for="skill in x.skills" class="skill">{{skill}}</span>
+                  </h3>
+                  <article class="content">
+                    <p v-for="y in x.description" class="paragraph">{{y}}</p>
+                  </article>
+                </section>
+              </article>
+            </li>
+          </ul>
+        </template>
+        <template v-if="item.hash === 'books'">
+          <h4 class="text-center">Total: {{books.total}}, and recent 20 are as belows:</h4>
+          <ul class="card-box text-center">
+            <li v-for="x in books.details">
+            <span class="transition">
+              <img :src="x.book.images.large" :alt="x.book.title">
+              <aside class="transition">{{x.book.isbn13}}</aside>
+            </span>
+            </li>
+          </ul>
+        </template>
+        <!-- <template v-if="item.hash === 'photos'">
+          <ul class="container-box text-center">
+            <li v-for="x in photos">
+              <img class="transition" :src="x.url" :alt="x.description">
+              <aside class="transition">{{x.description}}</aside>
+            </li>
+          </ul>
+        </template> -->
+      </article>
     </section>
 
     <div class="shut">找工作暂停...</div>
-</article> <!--结束section#frames-->
+  </article> <!--结束section#frames-->
 
-<div class="decoration"></div>
-<script src="js/app.min.js"></script>
+  <div class="decoration"></div>
+  <script src="js/app.min.js"></script>
 </body>
 </html>

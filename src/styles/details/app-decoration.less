@@ -1,0 +1,53 @@
+/*=================================================================================
+页面额外的一些内容
+===================================================================================*/
+/*定义页面左侧闲逛装饰效果动画*/
+@-ms-keyframes wander {
+	0%   {border-color: transparent transparent transparent rgba(78, 184, 234, .5); top: 50%; border-radius: 2em; border-width: 2em;}
+	15%  {border-color: rgba(214, 230, 54, .5) transparent transparent transparent; top: 90%; border-radius: 6em; border-width: 6em;}
+	50%  {border-color: transparent rgba(245, 140, 33, .5) transparent transparent; top: 10%; border-radius: 1em; border-width: 1em;}
+	65%  {border-color: transparent transparent rgba(214, 230, 54, .9) transparent; top: 90%; border-radius: 6em; border-width: 6em;}
+	100% {border-color: transparent transparent transparent rgba(78, 184, 234, .5); top: 50%; border-radius: 2em; border-width: 2em;}
+}
+@-moz-keyframes wander {
+	0%   {border-color: transparent transparent transparent rgba(78, 184, 234, .5); top: 50%; border-radius: 2em; border-width: 2em;}
+	15%  {border-color: rgba(214, 230, 54, .5) transparent transparent transparent; top: 90%; border-radius: 6em; border-width: 6em;}
+	50%  {border-color: transparent rgba(245, 140, 33, .5) transparent transparent; top: 10%; border-radius: 1em; border-width: 1em;}
+	65%  {border-color: transparent transparent rgba(214, 230, 54, .9) transparent; top: 90%; border-radius: 6em; border-width: 6em;}
+	100% {border-color: transparent transparent transparent rgba(78, 184, 234, .5); top: 50%; border-radius: 2em; border-width: 2em;}
+}
+@-webkit-keyframes wander {
+	0%   {border-color: transparent transparent transparent rgba(78, 184, 234, .5); top: 50%; border-radius: 2em; border-width: 2em;}
+	15%  {border-color: rgba(214, 230, 54, .5) transparent transparent transparent; top: 90%; border-radius: 6em; border-width: 6em;}
+	50%  {border-color: transparent rgba(245, 140, 33, .5) transparent transparent; top: 10%; border-radius: 1em; border-width: 1em;}
+	65%  {border-color: transparent transparent rgba(214, 230, 54, .9) transparent; top: 90%; border-radius: 6em; border-width: 6em;}
+	100% {border-color: transparent transparent transparent rgba(78, 184, 234, .5); top: 50%; border-radius: 2em; border-width: 2em;}
+}
+@-o-keyframes wander {
+	0%   {border-color: transparent transparent transparent rgba(78, 184, 234, .5); top: 50%; border-radius: 2em; border-width: 2em;}
+	15%  {border-color: rgba(214, 230, 54, .5) transparent transparent transparent; top: 90%; border-radius: 6em; border-width: 6em;}
+	50%  {border-color: transparent rgba(245, 140, 33, .5) transparent transparent; top: 10%; border-radius: 1em; border-width: 1em;}
+	65%  {border-color: transparent transparent rgba(214, 230, 54, .9) transparent; top: 90%; border-radius: 6em; border-width: 6em;}
+	100% {border-color: transparent transparent transparent rgba(78, 184, 234, .5); top: 50%; border-radius: 2em; border-width: 2em;}
+}
+@keyframes wander {
+	0%   {border-color: transparent transparent transparent rgba(78, 184, 234, .5); top: 50%; border-radius: 2em; border-width: 2em;}
+	15%  {border-color: rgba(214, 230, 54, .5) transparent transparent transparent; top: 90%; border-radius: 6em; border-width: 6em;}
+	50%  {border-color: transparent rgba(245, 140, 33, .5) transparent transparent; top: 10%; border-radius: 1em; border-width: 1em;}
+	65%  {border-color: transparent transparent rgba(214, 230, 54, .9) transparent; top: 90%; border-radius: 6em; border-width: 6em;}
+	100% {border-color: transparent transparent transparent rgba(78, 184, 234, .5); top: 50%; border-radius: 2em; border-width: 2em;}
+}
+/*开始页面左侧闲逛装饰效果*/
+.decoration {
+	width: 0px; height: 0px;
+	border: 2em solid;
+	border-radius: 2em;
+	border-color: transparent transparent transparent rgba(78, 184, 234, .5);
+	position: fixed; left: 0px; top: 50%;
+	-moz-animation: wander 10s linear 0s infinite alternate running;
+	-webkit-animation: wander 10s linear 0s infinite alternate running;
+	-o-animation: wander 10s linear 0s infinite alternate running;
+	-ms-animation: wander 10s linear 0s infinite alternate running;
+	animation: wander 10s linear 0s infinite alternate running;
+}
+/*结束页面外围闲逛装饰效果*/

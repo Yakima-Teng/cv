@@ -1,0 +1,76 @@
+/*css reset*/
+html, body, div, header, nav, article, aside, footer, a, p, img, ul, li, h3 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style-type: none;
+}
+
+/*global styles*/
+body {
+  font: 16px/1.5 arial, helvetics, sans-serif;
+  background: rgba(0, 0, 0, .2) url('../img/sky.jpg') no-repeat fixed center center /cover;
+}
+#wrapper {
+  width: 98%;
+  margin: 0 auto;
+  position: relative;
+}
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.text-center {
+  text-align: center;
+}
+.transition {
+  -webkit-transition: 300ms all linear;
+  -moz-transition: 300ms all linear;
+  -ms-transition: 300ms all linear;
+  -o-transition: 300ms all linear;
+  transition: 300ms all linear;
+}
+img {
+  max-width: 100%;
+}
+.black {
+  color: #000;
+}
+.white {
+  color: #fff;
+}
+/*page content*/
+.page-content {
+  width: 980px;
+  margin: 0 auto;
+}
+.section-sidebar, .section-content {
+  display: table-cell;
+  vertical-align: top;
+  border-bottom: 3px double black;
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, .3) inset;
+  -moz-box-shadow: 0 0 0 2px rgba(0, 0, 0, .3) inset;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, .3) inset;
+}
+/*section-content in page-content*/
+.section-content {
+  width: 100%;
+  background-color: rgba(240, 160, 80, .5);
+}
