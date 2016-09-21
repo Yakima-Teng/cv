@@ -151,8 +151,8 @@ module.exports = function (grunt) {
         files: [
           DEST + '*.html',
           DEST + 'css/**/*.css',
-          DEST + 'js/**/*.js',
-          DEST + 'img/**/**.{png,jpg,jpeg,gif}'
+          DEST + 'js/**/*.js'
+          // DEST + 'img/**/**.{png,jpg,jpeg,gif}'
         ]
       }
     }

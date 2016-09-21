@@ -48,8 +48,8 @@
         </template>
         <template v-if="item.hash === 'skills'">
           <ul class="arrow-box">
-            <li v-for="x in skills.items">
-              <a class="transition" @click.prevent="" href="##" :style="{width: x.percentage}">{{x.keywords}}</a>
+            <li v-for="x in skills.items" :style="{width: x.percentage}" class="item">
+              <a class="link" @click.prevent="" href="##">{{x.keywords}}</a>
             </li>
           </ul>
         </template>
