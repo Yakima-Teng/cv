@@ -1,4 +1,4 @@
-# resume
+# about
 
 > Online Demo: [https://yakima-teng.github.io/about/](https://yakima-teng.github.io/about/)
 
