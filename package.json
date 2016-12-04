@@ -1,23 +1,23 @@
 {
-  "name": "resume",
+  "name": "about",
   "version": "1.0.0",
-  "description": "my resume",
+  "description": "about me",
   "main": "index.js",
   "scripts": {
     "dev": "grunt dev",
-    "deploy": "gh-pages -d dist/resume",
+    "deploy": "gh-pages -d dist/about",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yakima-Teng/resume.git"
+    "url": "git+https://github.com/Yakima-Teng/about.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Yakima-Teng/resume/issues"
+    "url": "https://github.com/Yakima-Teng/about/issues"
   },
-  "homepage": "https://github.com/Yakima-Teng/resume#readme",
+  "homepage": "https://github.com/Yakima-Teng/about#readme",
   "devDependencies": {
     "babel-preset-es2015": "^6.14.0",
     "gh-pages": "^0.12.0",

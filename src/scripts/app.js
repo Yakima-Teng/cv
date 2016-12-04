@@ -60,7 +60,7 @@ let app = new Vue({
 	created () {
 		let _this = this
 		const promiseBooks = $.ajax({
-			url: 'http://yakima.duapp.com/douban/v2/book/user/cleveryun/collections',
+			url: '//yakima.duapp.com/douban/v2/book/user/cleveryun/collections',
 			type: 'GET',
 			dataType: 'jsonp',
 			jsonp: 'callback',

@@ -6,16 +6,16 @@
 const skills = {
   items: [
     {
-      keywords: 'NodeJS, ES6, ReactJS, AngularJS 1+, VueJS 1+',
-      percentage: '60%'
+      keywords: 'JS: NodeJS, ES6, ReactJS, AngularJS 1+, VueJS 1+',
+      percentage: '50%'
     },
     {
-      keywords: 'CSS, LESS',
-      percentage: '30%'
+      keywords: 'CSS: CSS3, LESS',
+      percentage: '50%'
     },
     {
-      keywords: 'Zhuangbiability',
-      percentage: '10%'
+      keywords: 'Badminton',
+      percentage: '70%'
     }
   ]
 }

@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
   var SOURCE = './src/'
   var WWW = 'dist/'
-  var DEST = './' + WWW + 'resume/'
+  var DEST = './' + WWW + 'about/'
   var port = 3000
   require('load-grunt-tasks')(grunt, {
     pattern: ['grunt-*', '@*/grunt-*']
@@ -126,7 +126,7 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
-          open: true,
+          open: 'http://localhost:' + port + '/about',
           base: [WWW]
         }
       }

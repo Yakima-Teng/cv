@@ -9,39 +9,36 @@ const demos = {
   note: '',
   items: [
     {
-      title: 'LetsBlog',
-      skills: ['Node.js', 'MySQL'],
+      title: '项目1',
       duration: '2012.11-Now',
       description: [
-        '为建立个人博客而开发的博客发布系统（上一版基于ASP.NET+SQLite开发），基于[[Express]]框架开发，页面由[[XTemplate]]模板引擎渲染，目前通过iisnode运行于IIS服务器上。',
-        '前端方面，应用了[[媒体查询]]、[[字体图标]]等技术，还引入了[[highlight.js]]高亮代码，使用户体验更佳。'
+        'bla bla bla bla bla bla',
+        'bla bla bla bla bla bla bla bla bla bla'
       ],
-      gitUrl: 'https://github.com/heeroluo/letsblog',
-      demoUrl: 'http://heeroluo.net/',
-      imgUrl: 'http://cv.heeroluo.net/images/project-letsblog.jpg'
+      gitUrl: 'https://github.com/Yakima-Teng/about',
+      demoUrl: 'https://yakima-teng.github.io/about/',
+      imgUrl: ''
     },
     {
-      title: 'LetsBlog',
-      skills: ['Node.js', 'MySQL'],
+      title: '项目2',
       duration: '2012.11-Now',
       description: [
-        '为建立个人博客而开发的博客发布系统（上一版基于ASP.NET+SQLite开发），基于[[Express]]框架开发，页面由[[XTemplate]]模板引擎渲染，目前通过iisnode运行于IIS服务器上。',
-        '前端方面，应用了[[媒体查询]]、[[字体图标]]等技术，还引入了[[highlight.js]]高亮代码，使用户体验更佳。'
+        'bla bla bla bla bla bla',
+        'bla bla bla bla bla bla bla bla bla bla'
       ],
-      gitUrl: 'https://github.com/heeroluo/letsblog',
-      demoUrl: 'http://heeroluo.net/',
-      imgUrl: 'http://cv.heeroluo.net/images/project-letsblog.jpg'
+      gitUrl: 'https://github.com/Yakima-Teng/about',
+      demoUrl: 'https://yakima-teng.github.io/about/',
+      imgUrl: ''
     },
     {
-      title: 'LetsBlog',
-      skills: ['Node.js', 'MySQL'],
+      title: '项目3',
       duration: '2012.11-Now',
       description: [
-        '为建立个人博客而开发的博客发布系统（上一版基于ASP.NET+SQLite开发），基于[[Express]]框架开发，页面由[[XTemplate]]模板引擎渲染，目前通过iisnode运行于IIS服务器上。',
-        '前端方面，应用了[[媒体查询]]、[[字体图标]]等技术，还引入了[[highlight.js]]高亮代码，使用户体验更佳。'
+        'bla bla bla bla bla bla',
+        'bla bla bla bla bla bla bla bla bla bla'
       ],
-      gitUrl: 'https://github.com/heeroluo/letsblog',
-      demoUrl: 'http://heeroluo.net/',
+      gitUrl: 'https://github.com/Yakima-Teng/about',
+      demoUrl: 'https://yakima-teng.github.io/about/',
       imgUrl: ''
     }
   ]
