@@ -20770,7 +20770,7 @@ var career = {
   title: '工作经历',
   description: '',
   note: '工作时间不超过三个月且未签订劳动合同的公司未列出。',
-  items: [['浙江普洛康裕制药有限公司', '2013年10月-2015年7月', '国际药品注册专员(RA)', '负责注册文件的组织、申报', '负责与注册当局/代理、终端用户沟通', '负责认证所需资料的准备和提交', '期间码的英文比中文多', '经常与总部及子公司各大小部门领导接触', '曾获羽球团体第二', '曾酱油篮球团体第二', '曾酱油气排球团体第一', '上市公司总部', '本科及以上学历者约300人', '曾和FDA、WHO审计官同处一会议室'], ['B公司', '上海优保网络科技有限公司', '2015年12月-?', '前端开发工程师', '负责公司微信项目的前端开发(微信端)', '负责公司内部后台的前端开发(PC端)', '团队成员：3后端1前端1测试1设计1后端出生直属领导', '曾获2015年本部门唯一的优秀名额', '期间前公司非直属领导曾询问是否有意向去子公司组建注册团队']]
+  items: [['浙江普洛康裕制药有限公司', '2013年10月-2015年7月', '国际药品注册专员(RA)', '期间码的英文比中文多', '经常与总部及子公司各大小部门领导接触', '曾获羽球团体第二、酱油篮球团体第二和气排球团体第一'], ['上海优保网络科技有限公司', '2015年12月-?', '前端开发工程师', '负责公司微信和PC端项目的前端开发(微信端)', '团队成员：3后端1前端1测试1设计1JAVA技能栈领导', '曾获2015年本部门唯一的优秀名额']]
 };
 /***********************************************************************************
  *                                                                                  *
@@ -20782,28 +20782,25 @@ var demos = {
   description: '',
   note: '',
   items: [{
-    title: 'LetsBlog',
-    skills: ['Node.js', 'MySQL'],
+    title: '项目1',
     duration: '2012.11-Now',
-    description: ['为建立个人博客而开发的博客发布系统（上一版基于ASP.NET+SQLite开发），基于[[Express]]框架开发，页面由[[XTemplate]]模板引擎渲染，目前通过iisnode运行于IIS服务器上。', '前端方面，应用了[[媒体查询]]、[[字体图标]]等技术，还引入了[[highlight.js]]高亮代码，使用户体验更佳。'],
-    gitUrl: 'https://github.com/heeroluo/letsblog',
-    demoUrl: 'http://heeroluo.net/',
-    imgUrl: 'http://cv.heeroluo.net/images/project-letsblog.jpg'
+    description: ['bla bla bla bla bla bla', 'bla bla bla bla bla bla bla bla bla bla'],
+    gitUrl: 'https://github.com/Yakima-Teng/about',
+    demoUrl: 'https://yakima-teng.github.io/about/',
+    imgUrl: ''
   }, {
-    title: 'LetsBlog',
-    skills: ['Node.js', 'MySQL'],
+    title: '项目2',
     duration: '2012.11-Now',
-    description: ['为建立个人博客而开发的博客发布系统（上一版基于ASP.NET+SQLite开发），基于[[Express]]框架开发，页面由[[XTemplate]]模板引擎渲染，目前通过iisnode运行于IIS服务器上。', '前端方面，应用了[[媒体查询]]、[[字体图标]]等技术，还引入了[[highlight.js]]高亮代码，使用户体验更佳。'],
-    gitUrl: 'https://github.com/heeroluo/letsblog',
-    demoUrl: 'http://heeroluo.net/',
-    imgUrl: 'http://cv.heeroluo.net/images/project-letsblog.jpg'
+    description: ['bla bla bla bla bla bla', 'bla bla bla bla bla bla bla bla bla bla'],
+    gitUrl: 'https://github.com/Yakima-Teng/about',
+    demoUrl: 'https://yakima-teng.github.io/about/',
+    imgUrl: ''
   }, {
-    title: 'LetsBlog',
-    skills: ['Node.js', 'MySQL'],
+    title: '项目3',
     duration: '2012.11-Now',
-    description: ['为建立个人博客而开发的博客发布系统（上一版基于ASP.NET+SQLite开发），基于[[Express]]框架开发，页面由[[XTemplate]]模板引擎渲染，目前通过iisnode运行于IIS服务器上。', '前端方面，应用了[[媒体查询]]、[[字体图标]]等技术，还引入了[[highlight.js]]高亮代码，使用户体验更佳。'],
-    gitUrl: 'https://github.com/heeroluo/letsblog',
-    demoUrl: 'http://heeroluo.net/',
+    description: ['bla bla bla bla bla bla', 'bla bla bla bla bla bla bla bla bla bla'],
+    gitUrl: 'https://github.com/Yakima-Teng/about',
+    demoUrl: 'https://yakima-teng.github.io/about/',
     imgUrl: ''
   }]
 };
@@ -20858,14 +20855,14 @@ var menus = [{
  ***********************************************************************************/
 var skills = {
   items: [{
-    keywords: 'NodeJS, ES6, ReactJS, AngularJS 1+, VueJS 1+',
-    percentage: '60%'
+    keywords: 'JS: NodeJS, ES6, ReactJS, AngularJS 1+, VueJS 1+',
+    percentage: '50%'
   }, {
-    keywords: 'CSS, LESS',
-    percentage: '30%'
+    keywords: 'CSS: CSS3, LESS',
+    percentage: '50%'
   }, {
-    keywords: 'Zhuangbiability',
-    percentage: '10%'
+    keywords: 'Badminton',
+    percentage: '70%'
   }]
 };
 /***********************************************************************************
@@ -20930,7 +20927,7 @@ var app = new Vue({
   created: function created() {
     var _this = this;
     var promiseBooks = $.ajax({
-      url: 'http://yakima.duapp.com/douban/v2/book/user/cleveryun/collections',
+      url: '//yakima.duapp.com/douban/v2/book/user/cleveryun/collections',
       type: 'GET',
       dataType: 'jsonp',
       jsonp: 'callback',
