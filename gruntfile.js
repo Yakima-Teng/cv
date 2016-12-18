@@ -101,24 +101,35 @@ module.exports = function (grunt) {
             filter: 'isFile'
           }
         ]
+      },
+      img: {
+        files: [
+          {
+            expand: true,
+            src: [SOURCE + 'assets/*.{png,jpg,jpeg,gif,ico}'],
+            dest: DEST + 'img/',
+            flatten: true,
+            filter: 'isFile'
+          }
+        ]
       }
     },
-    imagemin: {
-      dynamic: {
-        options: {
-          // for png optimization
-          optimizationLevel: 7
-        },
-        files: [{
-          expand: true,
-          // src matches are relative to this path
-          cwd: SOURCE + 'assets',
-          // 这里添加.ico文件不是为了压缩，仅仅是为了顺便把源目录下的.ico文件也复制到发布目录中
-          src: ['**/*.{png,jpg,jpeg,gif,ico}'],
-          dest: DEST + 'img/'
-        }]
-      }
-    },
+    // imagemin: {
+    //   dynamic: {
+    //     options: {
+    //       // for png optimization
+    //       optimizationLevel: 7
+    //     },
+    //     files: [{
+    //       expand: true,
+    //       // src matches are relative to this path
+    //       cwd: SOURCE + 'assets',
+    //       // 这里添加.ico文件不是为了压缩，仅仅是为了顺便把源目录下的.ico文件也复制到发布目录中
+    //       src: ['**/*.{png,jpg,jpeg,gif,ico}'],
+    //       dest: DEST + 'img/'
+    //     }]
+    //   }
+    // },
     connect: {
       options: {
         port: port,
@@ -127,7 +138,7 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
-          open: 'http://localhost:' + port + '' + projectName,
+          open: 'http://localhost:' + port + '/' + projectName,
           base: [WWW]
         }
       }
@@ -166,7 +177,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('html', ['copy:main'])
 
-  grunt.registerTask('image', ['imagemin:dynamic'])
+  // grunt.registerTask('image', ['imagemin:dynamic'])
+  grunt.registerTask('image', ['copy:img'])
 
   grunt.registerTask('dev', ['clean', 'html', 'css', 'js', 'image', 'connect:server', 'watch'])
 
