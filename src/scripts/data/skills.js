@@ -6,7 +6,7 @@
 const skills = {
   items: [
     {
-      keywords: 'JS: NodeJS, ES6, ReactJS, AngularJS 1+, VueJS 1+',
+      keywords: 'JS: NodeJS, ES6, ReactJS, AngularJS 1+, VueJS 1/2+',
       percentage: '50%'
     },
     {
