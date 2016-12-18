@@ -1,6 +1,6 @@
 # CV of Yakima Teng
 
-## Web Front-end Engineer
+## Screenshots
 
 ![](./screenshots/part1.png)
 
