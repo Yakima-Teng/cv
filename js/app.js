@@ -20902,6 +20902,7 @@ var skills = {
 var app = new Vue({
   el: 'html',
   data: {
+    homepageTitle: 'Yakima Teng\'s CV',
     menus: menus,
     skills: skills,
     basic: basic,
