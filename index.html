@@ -95,14 +95,14 @@
             </li>
           </ul>
         </template>
-        <template v-if="item.hash === 'books'">
-          <h4 class="text-center">Total: {{books.total}}, and recent 20 are as belows:</h4>
+        <template v-if="item.hash === 'footprints'">
+          <h4 class="text-center">You can find me in the following web sites:</h4>
           <ul class="card-box text-center">
-            <li v-for="x in books.details">
-            <span class="transition">
-              <img :src="x.book.images.large" :alt="x.book.title">
-              <aside class="transition">{{x.book.isbn13}}</aside>
-            </span>
+            <li v-for="x in footprints.details">
+              <a :href="x.destinationUrl" class="card transition">
+                <img :src="x.imgUrl" :alt="x.title">
+                <aside class="transition">{{x.title}}</aside>
+              </a>
             </li>
           </ul>
         </template>

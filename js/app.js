@@ -20824,6 +20824,35 @@ var education = {
     details: ['跳级到初中，保送到高中', 'CET-6']
   }]
 };
+/**
+ * *********************************************************************************
+ *                                                                                  *
+ * footprints
+ *                                                                                  *
+ ***********************************************************************************/
+var footprints = {
+  details: [{
+    title: 'Email',
+    text: 'yakima.teng@orzzone.com',
+    destinationUrl: 'mailto:yakima.teng@orzzone.com',
+    imgUrl: 'img/email.png'
+  }, {
+    title: 'Github',
+    text: 'github.com/Yakima-Teng',
+    destinationUrl: 'https://github.com/Yakima-Teng',
+    imgUrl: 'img/github.png'
+  }, {
+    title: 'Douban',
+    text: 'book.douban.com/people/cleveryun/',
+    destinationUrl: 'https://book.douban.com/people/cleveryun/',
+    imgUrl: 'img/douban.png'
+  }, {
+    title: 'Blog',
+    text: 'yakima.duapp.com/blog/',
+    destinationUrl: 'http://yakima.duapp.com/blog/',
+    imgUrl: 'img/pen.png'
+  }]
+};
 /***********************************************************************************
  *                                                                                  *
  * menus
@@ -20836,17 +20865,17 @@ var menus = [{
   title: '技能分布',
   hash: 'skills'
 }, {
-  title: '教育经历',
-  hash: 'education'
+  title: '项目经历',
+  hash: 'demos'
 }, {
   title: '工作经历',
   hash: 'career'
 }, {
-  title: '项目经历',
-  hash: 'demos'
+  title: '教育背景',
+  hash: 'education'
 }, {
-  title: '看过的书',
-  hash: 'books'
+  title: '江湖足迹',
+  hash: 'footprints'
 }];
 /***********************************************************************************
  *                                                                                  *
@@ -20879,25 +20908,26 @@ var app = new Vue({
     education: education,
     career: career,
     demos: demos,
-    books: {
-      total: 0,
-      details: [
-        // {
-        // 	book: {
-        // 		title: '',
-        // 		images: {
-        // 			large: ''
-        // 		},
-        // 		isbn13: '',
-        // 		summary: ''
-        // 	},
-        // 	rating: {
-        // 		value: ''
-        // 	},
-        // 	updated: ''
-        // }
-      ]
-    }
+    footprints: footprints
+    // books: {
+    // 	total: 0,
+    // 	details: [
+    // 		// {
+    // 		// 	book: {
+    // 		// 		title: '',
+    // 		// 		images: {
+    // 		// 			large: ''
+    // 		// 		},
+    // 		// 		isbn13: '',
+    // 		// 		summary: ''
+    // 		// 	},
+    // 		// 	rating: {
+    // 		// 		value: ''
+    // 		// 	},
+    // 		// 	updated: ''
+    // 		// }
+    // 	]
+    // }
   },
   methods: {
     scroll: function scroll(e) {
@@ -20925,39 +20955,37 @@ var app = new Vue({
     }
   },
   created: function created() {
-    var _this = this;
-    var promiseBooks = $.ajax({
-      url: '//yakima.duapp.com/douban/v2/book/user/cleveryun/collections',
-      type: 'GET',
-      dataType: 'jsonp',
-      jsonp: 'callback',
-      data: {
-        status: 'read'
-      },
-      timeout: 30000
-    });
-    promiseBooks.success(function (data) {
-      _this.books.total = data.total;
-      _this.books.details = data.collections.map(function (item) {
-        return {
-          book: {
-            title: item.book.title,
-            images: {
-              large: item.book.images.large
-            },
-            isbn13: item.book.isbn13,
-            summary: item.book.summary
-          },
-          rating: {
-            value: item.rating.value
-          },
-          updated: item.updated
-        };
-      });
-    });
-    promiseBooks.error(function (data) {
-      return console.log(data);
-    });
+    // let _this = this
+    // const promiseBooks = $.ajax({
+    // 	url: '//yakima.duapp.com/douban/v2/book/user/cleveryun/collections',
+    // 	type: 'GET',
+    // 	dataType: 'jsonp',
+    // 	jsonp: 'callback',
+    // 	data: {
+    // 		status: 'read'
+    // 	},
+    // 	timeout: 30000
+    // })
+    // promiseBooks.success(data => {
+    // 	_this.books.total = data.total
+    // 	_this.books.details = data.collections.map(item => {
+    // 		return {
+    // 			book: {
+    // 				title: item.book.title,
+    // 				images: {
+    // 					large: item.book.images.large
+    // 				},
+    // 				isbn13: item.book.isbn13,
+    // 				summary: item.book.summary
+    // 			},
+    // 			rating: {
+    // 				value: item.rating.value
+    // 			},
+    // 			updated: item.updated
+    // 		}
+    // 	})
+    // })
+    // promiseBooks.error(data => console.log(data))
   },
   ready: function ready() {
     $(window).scroll(function () {
