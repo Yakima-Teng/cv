@@ -1,23 +1,23 @@
 {
-  "name": "about",
+  "name": "CV",
   "version": "1.0.0",
-  "description": "about me",
+  "description": "Yakima Teng's CV as a Web Front-end Engineer",
   "main": "index.js",
   "scripts": {
     "dev": "grunt dev",
-    "deploy": "gh-pages -d dist/about",
+    "deploy": "gh-pages -d dist/cv",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yakima-Teng/about.git"
+    "url": "git+https://github.com/Yakima-Teng/cv.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Yakima-Teng/about/issues"
+    "url": "https://github.com/Yakima-Teng/cv/issues"
   },
-  "homepage": "https://github.com/Yakima-Teng/about#readme",
+  "homepage": "https://github.com/Yakima-Teng/cv#readme",
   "devDependencies": {
     "babel-preset-es2015": "^6.14.0",
     "gh-pages": "^0.12.0",
