@@ -13,19 +13,19 @@ const menus = [
     hash: 'skills',
   },
   {
-    title: '教育经历',
-    hash: 'education'
+    title: '项目经历',
+    hash: 'demos'
   },
   {
     title: '工作经历',
     hash: 'career'
   },
   {
-    title: '项目经历',
-    hash: 'demos'
+    title: '教育背景',
+    hash: 'education'
   },
   {
-    title: '看过的书',
-    hash: 'books'
+    title: '江湖足迹',
+    hash: 'footprints'
   }
 ]

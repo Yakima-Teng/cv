@@ -12,25 +12,26 @@ let app = new Vue({
 		education,
 		career,
 		demos,
-		books: {
-			total: 0,
-			details: [
-				// {
-				// 	book: {
-				// 		title: '',
-				// 		images: {
-				// 			large: ''
-				// 		},
-				// 		isbn13: '',
-				// 		summary: ''
-				// 	},
-				// 	rating: {
-				// 		value: ''
-				// 	},
-				// 	updated: ''
-				// }
-			]
-		}
+		footprints
+		// books: {
+		// 	total: 0,
+		// 	details: [
+		// 		// {
+		// 		// 	book: {
+		// 		// 		title: '',
+		// 		// 		images: {
+		// 		// 			large: ''
+		// 		// 		},
+		// 		// 		isbn13: '',
+		// 		// 		summary: ''
+		// 		// 	},
+		// 		// 	rating: {
+		// 		// 		value: ''
+		// 		// 	},
+		// 		// 	updated: ''
+		// 		// }
+		// 	]
+		// }
 	},
 	methods: {
 		scroll (e) {
@@ -58,37 +59,37 @@ let app = new Vue({
 		}
 	},
 	created () {
-		let _this = this
-		const promiseBooks = $.ajax({
-			url: '//yakima.duapp.com/douban/v2/book/user/cleveryun/collections',
-			type: 'GET',
-			dataType: 'jsonp',
-			jsonp: 'callback',
-			data: {
-				status: 'read'
-			},
-			timeout: 30000
-		})
-		promiseBooks.success(data => {
-			_this.books.total = data.total
-			_this.books.details = data.collections.map(item => {
-				return {
-					book: {
-						title: item.book.title,
-						images: {
-							large: item.book.images.large
-						},
-						isbn13: item.book.isbn13,
-						summary: item.book.summary
-					},
-					rating: {
-						value: item.rating.value
-					},
-					updated: item.updated
-				}
-			})
-		})
-		promiseBooks.error(data => console.log(data))
+		// let _this = this
+		// const promiseBooks = $.ajax({
+		// 	url: '//yakima.duapp.com/douban/v2/book/user/cleveryun/collections',
+		// 	type: 'GET',
+		// 	dataType: 'jsonp',
+		// 	jsonp: 'callback',
+		// 	data: {
+		// 		status: 'read'
+		// 	},
+		// 	timeout: 30000
+		// })
+		// promiseBooks.success(data => {
+		// 	_this.books.total = data.total
+		// 	_this.books.details = data.collections.map(item => {
+		// 		return {
+		// 			book: {
+		// 				title: item.book.title,
+		// 				images: {
+		// 					large: item.book.images.large
+		// 				},
+		// 				isbn13: item.book.isbn13,
+		// 				summary: item.book.summary
+		// 			},
+		// 			rating: {
+		// 				value: item.rating.value
+		// 			},
+		// 			updated: item.updated
+		// 		}
+		// 	})
+		// })
+		// promiseBooks.error(data => console.log(data))
 	},
 	ready () {
 		$(window).scroll(function() {
