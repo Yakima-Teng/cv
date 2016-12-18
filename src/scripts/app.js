@@ -6,6 +6,7 @@
 let app = new Vue({
 	el: 'html',
 	data: {
+		homepageTitle: 'Yakima Teng\'s CV',
 		menus,
 		skills,
 		basic,
