@@ -20769,8 +20769,10 @@ var basic = {
 var career = {
   title: '工作经历',
   description: '',
-  note: '工作时间不超过三个月且未签订劳动合同的公司未列出。',
-  items: [['浙江普洛康裕制药有限公司', '2013年10月-2015年7月', '国际药品注册专员(RA)', '期间码的英文比中文多', '经常与总部及子公司各大小部门领导接触', '曾获羽球团体第二、酱油篮球团体第二和气排球团体第一'], ['上海优保网络科技有限公司', '2015年12月-?', '前端开发工程师', '负责公司微信和PC端项目的前端开发(微信端)', '团队成员：3后端1前端1测试1设计1JAVA技能栈领导', '曾获2015年本部门唯一的优秀名额']]
+  note: '说明：未列出工作时间不超过三个月且未签订劳动合同的公司',
+  items: [['浙江普洛康裕制药有限公司', '2013年10月-2015年7月', '上市公司，约有2000员工', '国际药品注册专员(RA)', '期间码的英文比中文多', '曾获羽球团体第二、酱油篮球团体第二和气排球团体第一'], ['上海优保网络科技有限公司', '2015年12月-?', '小型初创公司', '前端开发工程师', '负责公司微信和PC端项目的前端开发', '团队成员：3后端1前端1测试1设计1JAVA技能栈领导'
+  // '曾获2015年本部门唯一的优秀名额'
+  ]]
 };
 /***********************************************************************************
  *                                                                                  *
@@ -20782,17 +20784,17 @@ var demos = {
   description: '',
   note: '',
   items: [{
-    title: '项目1',
+    title: '车险投保PC端管理系统',
     duration: '2012.11-Now',
     description: ['bla bla bla bla bla bla', 'bla bla bla bla bla bla bla bla bla bla'],
-    gitUrl: 'https://github.com/Yakima-Teng/about',
+    // gitUrl: 'https://github.com/Yakima-Teng/about',
     demoUrl: 'https://yakima-teng.github.io/about/',
     imgUrl: ''
   }, {
     title: '项目2',
     duration: '2012.11-Now',
     description: ['bla bla bla bla bla bla', 'bla bla bla bla bla bla bla bla bla bla'],
-    gitUrl: 'https://github.com/Yakima-Teng/about',
+    gitUrl: '',
     demoUrl: 'https://yakima-teng.github.io/about/',
     imgUrl: ''
   }, {
@@ -20848,8 +20850,8 @@ var footprints = {
     imgUrl: 'img/douban.png'
   }, {
     title: 'Blog',
-    text: 'yakima.duapp.com/blog/',
-    destinationUrl: 'http://yakima.duapp.com/blog/',
+    text: 'orzzone.duapp.com',
+    destinationUrl: 'http://orzzone.duapp.com',
     imgUrl: 'img/pen.png'
   }]
 };
@@ -20862,7 +20864,7 @@ var menus = [{
   title: '基本信息',
   hash: 'basic'
 }, {
-  title: '技能分布',
+  title: '技能描述',
   hash: 'skills'
 }, {
   title: '项目经历',
@@ -20884,11 +20886,17 @@ var menus = [{
  ***********************************************************************************/
 var skills = {
   items: [{
-    keywords: 'JS: NodeJS, ES6, ReactJS, AngularJS 1+, VueJS 1/2+',
-    percentage: '50%'
+    keywords: '项目框架经验：Vue1/2（PC端管理系统+微信端）、Angular1（微信端）',
+    percentage: '65%'
   }, {
-    keywords: 'CSS: CSS3, LESS',
-    percentage: '50%'
+    keywords: 'Hello World经验：Express+MySQL、ReactJS',
+    percentage: '43%'
+  }, {
+    keywords: 'CSS：使用预处理语言，通常自写样式而非用UI库',
+    percentage: '55%'
+  }, {
+    keywords: '构建倾向: gulp ≈ webpack >>> grunt',
+    percentage: '34%'
   }, {
     keywords: 'Badminton',
     percentage: '70%'
