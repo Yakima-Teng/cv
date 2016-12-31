@@ -9,7 +9,7 @@ const menus = [
     hash: 'basic'
   },
   {
-    title: '技能分布',
+    title: '技能描述',
     hash: 'skills',
   },
   {

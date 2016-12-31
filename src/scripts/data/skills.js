@@ -6,12 +6,20 @@
 const skills = {
   items: [
     {
-      keywords: 'JS: NodeJS, ES6, ReactJS, AngularJS 1+, VueJS 1/2+',
-      percentage: '50%'
+      keywords: '项目框架经验：Vue1/2（PC端管理系统+微信端）、Angular1（微信端）',
+      percentage: '65%'
     },
     {
-      keywords: 'CSS: CSS3, LESS',
-      percentage: '50%'
+      keywords: 'Hello World经验：Express+MySQL、ReactJS',
+      percentage: '43%'
+    },
+    {
+      keywords: 'CSS：使用预处理语言，通常自写样式而非用UI库',
+      percentage: '55%'
+    },
+    {
+      keywords: '构建倾向: gulp ≈ webpack >>> grunt',
+      percentage: '34%'
     },
     {
       keywords: 'Badminton',

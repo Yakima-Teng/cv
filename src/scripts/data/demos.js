@@ -9,13 +9,13 @@ const demos = {
   note: '',
   items: [
     {
-      title: '项目1',
+      title: '车险投保PC端管理系统',
       duration: '2012.11-Now',
       description: [
         'bla bla bla bla bla bla',
         'bla bla bla bla bla bla bla bla bla bla'
       ],
-      gitUrl: 'https://github.com/Yakima-Teng/about',
+      // gitUrl: 'https://github.com/Yakima-Teng/about',
       demoUrl: 'https://yakima-teng.github.io/about/',
       imgUrl: ''
     },
@@ -26,7 +26,7 @@ const demos = {
         'bla bla bla bla bla bla',
         'bla bla bla bla bla bla bla bla bla bla'
       ],
-      gitUrl: 'https://github.com/Yakima-Teng/about',
+      gitUrl: '',
       demoUrl: 'https://yakima-teng.github.io/about/',
       imgUrl: ''
     },

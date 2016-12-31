@@ -26,8 +26,8 @@ const footprints = {
     },
     {
       title: 'Blog',
-      text: 'yakima.duapp.com/blog/',
-      destinationUrl: 'http://yakima.duapp.com/blog/',
+      text: 'orzzone.duapp.com',
+      destinationUrl: 'http://orzzone.duapp.com',
       imgUrl: 'img/pen.png'
     }
   ]
