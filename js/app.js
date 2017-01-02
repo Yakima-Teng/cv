@@ -20755,7 +20755,7 @@ var basic = {
     detail: '上海'
   }, {
     title: '期望薪资',
-    detail: '10K+ (税后)'
+    detail: '10K+'
   }, {
     title: '联系方式',
     detail: ['.com', '@163', 'cleveryun'].reverse().join('')
