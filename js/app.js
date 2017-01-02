@@ -20786,7 +20786,7 @@ var demos = {
   items: [{
     title: '车险投保PC端管理系统',
     duration: '2012.11-Now',
-    description: ['未使用框架（jQuery是库不是框架）', '主体内容的切换借助ifame标签实现', '页面间的数据共享借助localStorage实现', '打印'],
+    description: ['未使用框架（jQuery是库不是框架）', '无限嵌套的勾选树', '打印'],
     gitUrl: '',
     demoUrl: '',
     imgUrl: ''
