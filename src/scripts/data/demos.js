@@ -13,8 +13,7 @@ const demos = {
       duration: '2012.11-Now',
       description: [
         '未使用框架（jQuery是库不是框架）',
-        '主体内容的切换借助ifame标签实现',
-        '页面间的数据共享借助localStorage实现',
+        '无限嵌套的勾选树',
         '打印'
       ],
       gitUrl: '',
