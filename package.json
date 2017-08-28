@@ -6,18 +6,19 @@
   "scripts": {
     "dev": "grunt dev",
     "deploy": "gh-pages -d dist/cv",
+    "deployToOSChina": "gh-pages -d dist/cv -b oschina-pages -o oschina -r https://git.oschina.net/yakima/cv.git",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yakima-Teng/cv.git"
+    "url": "git+https://git.oschina.net/yakima/cv.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Yakima-Teng/cv/issues"
+    "url": "https://git.oschina.net/yakima/cv/issues"
   },
-  "homepage": "https://github.com/Yakima-Teng/cv#readme",
+  "homepage": "https://git.oschina.net/yakima/cv#readme",
   "devDependencies": {
     "babel-preset-es2015": "^6.14.0",
     "gh-pages": "^0.12.0",

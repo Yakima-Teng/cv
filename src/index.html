@@ -14,7 +14,7 @@
     <nav class="transition">
       <ul>
         <li v-for="x in menus">
-          <a :href="'#' + x.hash"  v-on:click.prevent="scroll">{{x.title}}</a>
+          <a :href="'#' + x.hash" v-on:click.prevent="scroll">{{x.title}}</a>
         </li>
       </ul>
     </nav>
@@ -39,13 +39,23 @@
       </aside>
       <article :id="item.hash" class="section-content">
         <template v-if="item.hash === 'basic'">
-          <ul class="table-box">
-            <li v-for="x in basic.items">
-              <span>{{x.title}}</span>
-              <span>{{x.detail}}</span>
+          <ul class="shadow-box clearfix">
+            <li v-for="x in education.items">
+              <h3>{{x.title}}</h3>
+              <ul>
+                <li v-for="y in x.details">{{y}}</li>
+              </ul>
             </li>
           </ul>
         </template>
+        <!--<template v-if="item.hash === 'basic'">-->
+          <!--<ul class="table-box">-->
+            <!--<li v-for="x in basic.items">-->
+              <!--<span>{{x.title}}</span>-->
+              <!--<span>{{x.detail}}</span>-->
+            <!--</li>-->
+          <!--</ul>-->
+        <!--</template>-->
         <template v-if="item.hash === 'skills'">
           <ul class="arrow-box">
             <li v-for="x in skills.items" :style="{width: x.percentage}" class="item">
@@ -101,7 +111,7 @@
           <ul class="card-box text-center">
             <li v-for="x in footprints.details">
               <a :href="x.destinationUrl" class="card transition">
-                <img :src="x.imgUrl" :alt="x.title">
+                <img :data-original="x.imgUrl" :alt="x.title" class="lazy">
                 <aside class="transition">{{x.title}}</aside>
               </a>
             </li>
@@ -110,7 +120,7 @@
         <!-- <template v-if="item.hash === 'photos'">
           <ul class="container-box text-center">
             <li v-for="x in photos">
-              <img class="transition" :src="x.url" :alt="x.description">
+              <img class="transition lazy" :data-original="x.url" :alt="x.description">
               <aside class="transition">{{x.description}}</aside>
             </li>
           </ul>

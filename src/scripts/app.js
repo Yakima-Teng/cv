@@ -37,9 +37,7 @@ let app = new Vue({
 	methods: {
 		scroll (e) {
 			var element = e.currentTarget
-			console.log(element.href)
 			var targetId = $(element).prop('href').split('#')[1]
-			console.log(targetId)
 			$('html,body').animate({
 				scrollTop: $('#' + targetId).position().top - 50 + 'px'
 			}, 300, function() {
@@ -101,4 +99,8 @@ let app = new Vue({
 			}
 		})
 	}
+})
+
+$(document).ready(function () {
+  $('.lazy').lazyload()
 })
