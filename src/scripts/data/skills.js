@@ -18,7 +18,7 @@ const skills = {
       percentage: '95%'
     },
     {
-      keywords: '无障碍: webpack, gulp, vue1/2+vuex+vue-router, react+react-router, react-native+redux, angular1/2',
+      keywords: '无障碍: webpack, gulp, vue1/2+vuex+vue-router, react+react-router, react-native+redux, angular1/2，jQuery',
       percentage: '95%'
     },
     {
