@@ -1,3 +1,4 @@
+@import './app-utilities.less';
 .demo-box {
   padding: 12px 24px;
   .demo {
@@ -35,18 +36,52 @@
       }
     }
   }
-  .urls {
-    font-size: 0;
-    letter-spacing: 12px;
-    .demo-link, .code-link {
-      display: inline-block;
-      vertical-align: middle;
-      letter-spacing: -1px;
-      font-size: 14px;
-      font-weight: normal;
-      text-decoration: none;
-      &:hover, &:active {
-        text-decoration: underline;
+  .article {
+    .clearfix();
+    .left, .right {
+      float: left;
+    }
+    .left {
+      height: 0;
+      padding-bottom: 20%;
+      background: #999 scroll no-repeat center center;
+      background-size: cover;
+      width: 0;
+      border-radius: 8px;
+      &.has-img {
+        width: 20%;
+      }
+    }
+    .right {
+      width: 100%;
+      &.has-img {
+        width: 80%;
+        padding-left: 20px;
+        box-sizing: border-box;
+      }
+    }
+    .urls {
+      font-size: 0;
+      letter-spacing: 12px;
+      .demo-link, .code-link {
+        display: inline-block;
+        vertical-align: middle;
+        letter-spacing: -1px;
+        font-size: 14px;
+        font-weight: normal;
+        text-decoration: none;
+        &:hover, &:active {
+          text-decoration: underline;
+        }
+      }
+    }
+    .content {
+      .paragraph {
+        line-height: 1.5;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #333;
+        background-color: rgba(200, 200, 200, .2);
       }
     }
   }

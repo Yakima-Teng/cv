@@ -10,7 +10,7 @@ let app = new Vue({
 		menus,
 		skills,
 		basic,
-		education,
+		// education,
 		career,
 		demos,
 		footprints
@@ -36,11 +36,11 @@ let app = new Vue({
 	},
 	methods: {
 		scroll (e) {
-			var element = e.currentTarget
-			var targetId = $(element).prop('href').split('#')[1]
+			const element = e.currentTarget
+			const targetId = $(element).prop('href').split('#')[1]
 			$('html,body').animate({
 				scrollTop: $('#' + targetId).position().top - 50 + 'px'
-			}, 300, function() {
+			}, 300, () => {
 			// Animation complete
 			})
 		}
@@ -91,7 +91,7 @@ let app = new Vue({
 		// promiseBooks.error(data => console.log(data))
 	},
 	ready () {
-		$(window).scroll(function() {
+		$(window).scroll(() => {
 			if ($(window).scrollTop() > 0) {
 				app.$emit('leaveTop');
 			} else {
@@ -101,6 +101,6 @@ let app = new Vue({
 	}
 })
 
-$(document).ready(function () {
+$(document).ready(() => {
   $('.lazy').lazyload()
 })

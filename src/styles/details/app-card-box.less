@@ -1,93 +1,81 @@
 /*card-box*/
-.card-box li {
-  display: inline-block;
-  width: 18%;
-  margin-left: 1.6%;
-  height: 200px;
-}
-.card-box li:nth-child(5n+1) {
-  margin-left: 0;
-}
-.card-box .card {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.card-box li:hover .card {
-   cursor: pointer;
-   -webkit-transform: rotateY(180deg);
-   -moz-transform: rotateY(180deg);
-   -ms-transform: rotateY(180deg);
-   -o-transform: rotateY(180deg);
-   transform: rotateY(180deg);
- }
-.card-box li:nth-of-type(2n):hover .card {
-  -webkit-transform: rotateX(180deg);
-  -moz-transform: rotateX(180deg);
-  -ms-transform: rotateX(180deg);
-  -o-transform: rotateX(180deg);
-  transform: rotateX(180deg);
-}
-.card-box img {
-  width: 100%;
-  height: 100%;
-}
-.card-box aside {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  line-height: 200px;
-  background-color: #0a0a0a;
-  color: yellow;
-  z-index: -1;
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-.card-box li:nth-of-type(2n) aside {
-  -webkit-transform: rotateX(180deg);
-  -moz-transform: rotateX(180deg);
-  -ms-transform: rotateX(180deg);
-  -o-transform: rotateX(180deg);
-  transform: rotateX(180deg);
-}
-.card-box li:hover aside {
-  z-index: 1;
-  opacity: 1;
-  visibility: visible;
-}
-.card-box aside:after {
-  content: '';
-  position: absolute;
-  -webkit-transition: 300ms all linear 300ms;
-  -moz-transition: 300ms all linear 300ms;
-  -ms-transition: 300ms all linear 300ms;
-  -o-transition: 300ms all linear 300ms;
-  transition: 300ms all linear 300ms;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  transform:skewx(-25deg);
-  -o-transform:skewx(-25deg);
-  -moz-transform:skewx(-25deg);
-  -ms-transform:skewx(-25deg);
-  -webkit-transform:skewx(-25deg);
-  /*正式写法的渐变没有加厂商前缀的好看。。。*/
-  background-image: linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
-  background-image: -ms-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
-  background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
-  background-image: -o-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
-  background-image:-webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
-}
-.card-box li:hover aside:after {
-  left: 100%;
+.card-box {
+  padding-bottom: 20px;
+  li {
+    display: inline-block;
+    width: 32%;
+    margin-left: 1%;
+    height: 200px;
+    &:nth-of-type(5n+1) {
+      margin-left: 0;
+    }
+    &:nth-of-type(2n) {
+      &:hover {
+        .card {
+          transform: rotateX(180deg);
+        }
+      }
+      aside {
+        transform: rotateX(180deg);
+      }
+    }
+    &:hover {
+      .card {
+        cursor: pointer;
+        transform: rotateY(180deg);
+      }
+      aside {
+        z-index: 1;
+        opacity: 1;
+        visibility: visible;
+        &:after {
+          left: 100%;
+        }
+      }
+    }
+  }
+  .card {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: transparent scroll no-repeat center center;
+    background-size: cover;
+  }
+  aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 200px;
+    background-color: #0a0a0a;
+    color: yellow;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transform: rotateY(180deg);
+    &:after {
+      content: '';
+      position: absolute;
+      transition: 300ms all linear 300ms;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      transform:skewx(-25deg);
+      /*正式写法的渐变没有加厂商前缀的好看。。。*/
+      background-image: linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+      background-image: -ms-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+      background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+      background-image: -o-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+      background-image:-webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    }
+  }
 }

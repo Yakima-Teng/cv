@@ -37,33 +37,29 @@
           </ul>
         </nav>
       </aside>
-      <article :id="item.hash" class="section-content">
-        <template v-if="item.hash === 'basic'">
+      <template v-if="item.hash === 'basic'">
+        <article :id="item.hash" class="section-content h260">
           <ul class="shadow-box clearfix">
-            <li v-for="x in education.items">
+            <li v-for="x in basic.items">
               <h3>{{x.title}}</h3>
               <ul>
                 <li v-for="y in x.details">{{y}}</li>
               </ul>
             </li>
           </ul>
-        </template>
-        <!--<template v-if="item.hash === 'basic'">-->
-          <!--<ul class="table-box">-->
-            <!--<li v-for="x in basic.items">-->
-              <!--<span>{{x.title}}</span>-->
-              <!--<span>{{x.detail}}</span>-->
-            <!--</li>-->
-          <!--</ul>-->
-        <!--</template>-->
-        <template v-if="item.hash === 'skills'">
+        </article>
+      </template>
+      <template v-if="item.hash === 'skills'">
+        <article :id="item.hash" class="section-content">
           <ul class="arrow-box">
             <li v-for="x in skills.items" :style="{width: x.percentage}" class="item">
               <a class="link" @click.prevent="" href="##">{{x.keywords}}</a>
             </li>
           </ul>
-        </template>
-        <template v-if="item.hash === 'career'">
+        </article>
+      </template>
+      <template v-if="item.hash === 'career'">
+        <article :id="item.hash" class="section-content">
           <h4 class="text-center">{{career.note}}</h4>
           <ul class="list-box text-center">
             <li v-for="x in career.items">
@@ -72,28 +68,26 @@
               </ul>
             </li>
           </ul>
-        </template>
-        <template v-if="item.hash === 'education'">
-          <ul class="shadow-box clearfix">
-            <li v-for="x in education.items">
-              <h3>{{x.title}}</h3>
-              <ul>
-                <li v-for="y in x.details">{{y}}</li>
-              </ul>
-            </li>
-          </ul>
-        </template>
-        <template v-if="item.hash === 'demos'">
+        </article>
+      </template>
+      <template v-if="item.hash === 'demos'">
+        <article :id="item.hash" class="section-content">
           <ul class="demo-box">
             <li v-for="x in demos.items" class="demo">
               <header class="header">
                 <div class="left">{{x.title}}</div>
                 <div class="right">
-                  <span class="text">{{x.duration}}</span>
+                  <span class="text">{{x.keyword}}</span>
                 </div>
               </header>
               <article class="article">
-                <section class="left">
+                <section
+                  :style="{'background-image': 'url(' + x.imgUrl + ')'}"
+                  :class="{'has-img': !!x.imgUrl}"
+                  class="left"></section>
+                <section
+                  :class="{'has-img': !!x.imgUrl}"
+                  class="right">
                   <h3 class="urls">
                     <a v-show="x.demoUrl" :href="x.demoUrl" class="demo-link">在线地址</a>
                     <a v-show="x.gitUrl" :href="x.gitUrl" class="code-link">项目源码</a>
@@ -105,27 +99,22 @@
               </article>
             </li>
           </ul>
-        </template>
-        <template v-if="item.hash === 'footprints'">
+        </article>
+      </template>
+      <template v-if="item.hash === 'footprints'">
+        <article :id="item.hash" class="section-content">
           <h4 class="text-center">You can find me in the following web sites:</h4>
           <ul class="card-box text-center">
             <li v-for="x in footprints.details">
               <a :href="x.destinationUrl" class="card transition">
-                <img :data-original="x.imgUrl" :alt="x.title" class="lazy">
+                <span :style="{'background-image': 'url(' + x.imgUrl + ')'}" class="img"></span>
+                <!-- <img :data-original="x.imgUrl" :alt="x.title" class="lazy"> -->
                 <aside class="transition">{{x.title}}</aside>
               </a>
             </li>
           </ul>
-        </template>
-        <!-- <template v-if="item.hash === 'photos'">
-          <ul class="container-box text-center">
-            <li v-for="x in photos">
-              <img class="transition lazy" :data-original="x.url" :alt="x.description">
-              <aside class="transition">{{x.description}}</aside>
-            </li>
-          </ul>
-        </template> -->
-      </article>
+        </article>
+      </template>
     </section>
 
     <div class="shut">找工作暂停...</div>

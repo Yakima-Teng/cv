@@ -7,28 +7,22 @@
 const footprints = {
   details: [
     {
-      title: 'Email',
-      text: 'yakima.teng@orzzone.com',
-      destinationUrl: 'mailto:yakima.teng@orzzone.com',
-      imgUrl: 'img/email.png'
-    },
-    {
-      title: 'Github',
+      title: '码云Git',
       text: 'github.com/Yakima-Teng',
-      destinationUrl: 'https://github.com/Yakima-Teng',
-      imgUrl: 'img/github.png'
+      destinationUrl: 'https://git.oschina.net/yakima',
+      imgUrl: 'img/coding.gif'
     },
     {
-      title: 'Douban',
+      title: '读书100+',
       text: 'book.douban.com/people/cleveryun/',
-      destinationUrl: 'https://book.douban.com/people/cleveryun/',
-      imgUrl: 'img/douban.png'
+      destinationUrl: 'https://book.douban.com/people/cleveryun/collect',
+      imgUrl: 'img/reading.jpg'
     },
     {
-      title: 'Blog',
-      text: 'orzzone.duapp.com',
-      destinationUrl: 'http://orzzone.duapp.com',
-      imgUrl: 'img/pen.png'
+      title: '写博8年',
+      text: 'orzzone.com',
+      destinationUrl: 'http://www.orzzone.com',
+      imgUrl: 'img/blogging.jpg'
     }
   ]
 }

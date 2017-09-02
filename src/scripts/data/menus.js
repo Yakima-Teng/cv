@@ -20,10 +20,10 @@ const menus = [
     title: '工作经历',
     hash: 'career'
   },
-  {
-    title: '教育背景',
-    hash: 'education'
-  },
+  // {
+  //   title: '教育背景',
+  //   hash: 'education'
+  // },
   {
     title: '江湖足迹',
     hash: 'footprints'

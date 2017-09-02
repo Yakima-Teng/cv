@@ -10,7 +10,7 @@ const skills = {
       percentage: '95%'
     },
     {
-      keywords: '编程纠错：能根据需要自行搭建开发环境，定位bug的能力较强，熟练使用Charles抓包工具，代码风格良好',
+      keywords: '编程纠错：能根据需要自行搭建开发环境，定位bug的能力较强，知道如何抓包和调试webview内嵌页面',
       percentage: '95%'
     },
     {
@@ -18,7 +18,7 @@ const skills = {
       percentage: '95%'
     },
     {
-      keywords: '无障碍: webpack, gulp, vue1/2+vuex+vue-router, react+react-router, react-native+redux, angular1/2，jQuery',
+      keywords: '快速上手: webpack, gulp, vue/react/angular全家桶（框架、路由、状态管理），jQuery',
       percentage: '95%'
     },
     {
