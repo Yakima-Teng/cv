@@ -93,7 +93,7 @@
                     <a v-show="x.gitUrl" :href="x.gitUrl" class="code-link">项目源码</a>
                   </h3>
                   <article class="content">
-                    <p v-for="y in x.description" class="paragraph">{{y}}</p>
+                    <p v-for="y in x.description" class="paragraph" v-html="y"></p>
                   </article>
                 </section>
               </article>
