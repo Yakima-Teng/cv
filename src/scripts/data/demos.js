@@ -37,8 +37,8 @@ const demos = {
       title: '博客',
       keyword: 'Express + MySQL + EJS, Angular1',
       description: [
-        '个人项目，非私活。最早上线的是一个前端Angular SPA + 后端Express提供API接口的版本（数据库使用的是MySQL），代码和在线地址见上面链接。后期考虑到SEO的问题，在后端用EJS作为模版重写了一版本，在线地址：<a href="http://www.yxeye.com/blog">http://www.yxeye.com/blog</a>。',
-        'Angular版本开发环境使用gulp，支持模版文件，请求转发等常见功能，发表评论的功能被我禁掉了，因为自己后端安全方面知识欠缺，数据库里的东西对我又很重要，怕出问题。',
+        '个人项目，非私活。最早上线的是一个前端Angular SPA + 后端Node(Express框架)提供API接口的版本（数据库使用的是MySQL），代码和在线地址见上面链接。后期考虑到SEO的问题，在后端用EJS作为模版重写了一版本，在线地址：<a href="http://www.yxeye.com/blog">http://www.yxeye.com/blog</a>。',
+        'Angular版本开发环境使用gulp，支持模版文件，请求转发等常见功能，发表评论的功能（支持嵌套评论）被我禁掉了，因为自己后端安全方面知识欠缺，数据库里的东西对我又很重要，开放这种往数据库里写数据的接口怕出问题。',
         '注册功能目前存在未解决的技术问题，网上大部分demo都是新建数据库，我要跟现有的数据库打通，所以没啥帮助。有一种方法是访问Wordpress提供的用户相关API，但是我想直接跟数据库里的账号信息进行比对，在把Wordpress保存的密码在Node端进行加解密这块算是卡住了。'
       ],
       gitUrl: 'https://git.oschina.net/yakima/blog',
@@ -47,82 +47,39 @@ const demos = {
     },
     {
       title: '公司项目',
-      keyword: '移动端开发，微信JS SDK，车险报价投保业务，PC端管理系统，Websocket'，
+      keyword: '移动端开发，微信JS SDK，车险报价投保业务，PC端管理系统，Websocket',
       description: [
         '开发过的项目大多是小范围内部使用的，而且由于公司人事方面的原因，有些项目中途转给北京总部的一个项目组做了，还有些项目夭折了，不过下面提到的都不是凭空捏造的，代码面试的时候可以现场看并针对性地提问，我面试时会带上电脑^_^。',
         '开发过一个车险投保PC端管理系统，起初使用Vue1全家桶开发，后期应领导要求（为了便于让后端同事也能参与开发）进行了重构，采用了传统的iframe + jQuery + html模版（handlebars）开发模式，自行封装了弹框、分页、日期等组件，和路由、页面打印、无限嵌套的勾选树等功能。该项目后来转交给北京项目组了。',
         '开发过一个车辆估损PC端管理系统，使用Vue1全家桶开发，有个通过Websocket实时通讯的功能，管理平台内勤最多同时被分配4个微信端用户，聊天支持文本和图片，支持120个微信基础表情。',
-        ''
+        '参与过公司其他项目部一个太平洋保险长期外包的寿险APP项目的开发（react native + redux + flow类型检查），独立开发过绑定用户订阅邮箱的功能，和iOS、android开发协同开发过更新用户头像的功能。',
+        '最主要的工作成果是一个车险比价投保功能的微信端、安卓APP端SPA项目，借助rem单位实现自适应，这个项目基本上半年大改一次从头开始，框架也历经了最初的客户端vue1到vue1+webpack到现在的vue2+webpack，现在这个项目的产品、测试和管我们的技术领导都要么走了要么不负责这块了，北京上海的几个利益团体在这个项目上纠葛得比较厉害，而且直接管我们的业务部门对技术的态度不甚友好，这也是加速离职的主要理由。'
+      ],
+      gitUrl: '',
+      demoUrl: '',
+      imgUrl: ''
+    },
+    {
+      title: 'mock server',
+      keyword: '服务端数据模拟、请求转发',
+      description: [
+        '服务器端数据模拟，方便前端工程师独立于后端进行开发。支持请求转发、响应静态JSON文件数据、响应自定义动态数据（内置mockjs），详细说明请点击上面链接地址（项目源码）查看README.md文档'
+      ],
+      gitUrl: 'https://git.oschina.net/yakima/mock-server',
+      demoUrl: '',
+      imgUrl: ''
+    },
+    {
+      title: '项目脚手架',
+      keyword: 'react, vue, iframe+jQuery+handlebars, webpack，gulp',
+      description: [
+        'Vue项目脚手架：根据Vue官方webpack模版改造出了一个vue2项目开发环境，vue2 + vue-router + vuex + webpack + ES6 support + babel + eslint，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/blog-admin">源代码</a>、<a href="http://yakima.oschina.io/blog-admin">demo</a>',
+        'React项目脚手架：为了在开发react项目时能有和开发vue项，根据vue-cli webpack模版改编出了一个react项目开发环境，react + react-router + webpack + ES6 support + babel + eslint，预置了几个动画效果，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/demos">源代码</a>、<a href="http://yakima.oschina.io/demos">demo</a>。',
+        'iframe项目脚手架：基于iframe + jQuery + handlebars + gulp实现的类SPA应用开发环境，适用于有对前端了解较少的后端同学需要一起参与前端开发工作的的项目，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/iframe-application">源代码</a>、<a href="http://yakima.oschina.io/iframe-application">demo</a>'
       ],
       gitUrl: '',
       demoUrl: '',
       imgUrl: ''
     }
-    // {
-    //   title: '车险比价微信端项目',
-    //   keyword: '2012.11-Now',
-    //   description: [
-    //     'Vue1、一堆表单、借助rem单位实现自适应布局'
-    //   ],
-    //   gitUrl: '',
-    //   demoUrl: '',
-    //   imgUrl: ''
-    // },
-    // {
-    //   title: '博客',
-    //   keyword: '2012.11-Now',
-    //   description: [
-    //     'Angular1，接口由NodeJS+Mysql提供',
-    //     '支持根据来源显示对应的上一篇文章和下一篇文章',
-    //     '支持简单的评论功能'
-    //   ],
-    //   gitUrl: 'https://github.com/Yakima-Teng/blog',
-    //   demoUrl: 'http://www.orzzone.com/blog/',
-    //   imgUrl: ''
-    // },
-    // {
-    //   title: 'react-webpack项目脚手架',
-    //   keyword: '2012.11-Now',
-    //   description: [
-    //     'react + react-router + webpack + ES6 + babel + eslint',
-    //     '由Vue官方webpack模版改造而来的react项目开发脚手架，预置了一个可由鼠标操控的六面体'
-    //   ],
-    //   gitUrl: 'https://github.com/Yakima-Teng/react-webpack-boilerplate',
-    //   demoUrl: 'http://www.orzzone.com/react-webpack-boilerplate/',
-    //   imgUrl: ''
-    // },
-    // {
-    //   title: 'vue2-webpack项目脚手架',
-    //   keyword: '2012.11-Now',
-    //   description: [
-    //     'vue2 + vue-router + vuex + webpack + ES6 + eslint',
-    //     '由Vue官方webpack模版改造而来的vue2项目开发脚手架'
-    //   ],
-    //   gitUrl: 'https://github.com/Yakima-Teng/vue2-webpack-boilerplate',
-    //   demoUrl: 'https://yakima-teng.github.io/vue2-webpack-boilerplate/',
-    //   imgUrl: ''
-    // },
-    // {
-    //   title: 'mock server',
-    //   keyword: '2012.11-Now',
-    //   description: [
-    //     '服务器端数据模拟，方便前端工程师独立于后端进行开发',
-    //     '支持代理请求、响应静态JSON文件数据、响应自定义动态数据'
-    //   ],
-    //   gitUrl: 'https://github.com/Yakima-Teng/mock-server',
-    //   demoUrl: '',
-    //   imgUrl: ''
-    // },
-    // {
-    //   title: 'iframe application',
-    //   keyword: '2012.11-Now',
-    //   description: [
-    //     '基于iframe实现的类SPA应用脚手架',
-    //     '适用于有对前端了解较少的后端参与的前端应用类项目的开发'
-    //   ],
-    //   gitUrl: 'https://github.com/Yakima-Teng/iframe-application',
-    //   demoUrl: '',
-    //   imgUrl: ''
-    // }
   ]
 }
