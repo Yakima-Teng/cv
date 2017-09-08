@@ -37,37 +37,27 @@ const demos = {
       title: '博客',
       keyword: 'Express + MySQL + EJS, Angular1',
       description: [
-        '个人项目，非私活。最早上线的是一个前端Angular SPA + 后端Express提供API接口的版本，代码和在线地址见上面链接。后期考虑到SEO的问题，在后端用EJS作为模版重写了一版本，在线地址：<a href="http://www.yxeye.com/blog">http://www.yxeye.com/blog</a>。',
+        '个人项目，非私活。最早上线的是一个前端Angular SPA + 后端Express提供API接口的版本（数据库使用的是MySQL），代码和在线地址见上面链接。后期考虑到SEO的问题，在后端用EJS作为模版重写了一版本，在线地址：<a href="http://www.yxeye.com/blog">http://www.yxeye.com/blog</a>。',
         'Angular版本开发环境使用gulp，支持模版文件，请求转发等常见功能，发表评论的功能被我禁掉了，因为自己后端安全方面知识欠缺，数据库里的东西对我又很重要，怕出问题。',
-        '数据库使用MySQL而非前端爱用的NoSQL，我用MySQL是因为一直在用WordPress这个历史原因，前端爱用NoSQL大抵是因为最初几本翻译过来Node书籍里涉及到数据库的地方讲的是NoSQL所以后面上来的很多都用NoSQL了吧-_-。我觉得MySQL对大部分场景都是够用的。',
-        '注册功能目前存在未解决的技术问题，网上大部分demo都是新建的数据库，我要跟现有的数据库打通，有一种方法是访问Wordpress提供的用户相关API，但是我想直接跟数据库里的账号信息进行比对，在把Wordpress保存的密码在Node端进行加解密这块算是卡住了。'
+        '注册功能目前存在未解决的技术问题，网上大部分demo都是新建数据库，我要跟现有的数据库打通，所以没啥帮助。有一种方法是访问Wordpress提供的用户相关API，但是我想直接跟数据库里的账号信息进行比对，在把Wordpress保存的密码在Node端进行加解密这块算是卡住了。'
       ],
       gitUrl: 'https://git.oschina.net/yakima/blog',
       demoUrl: 'http://yakima.oschina.io/blog',
       imgUrl: 'img/post_English.png'
+    },
+    {
+      title: '公司项目',
+      keyword: '移动端开发，微信JS SDK，车险报价投保业务，PC端管理系统，Websocket'，
+      description: [
+        '开发过的项目大多是小范围内部使用的，而且由于公司人事方面的原因，有些项目中途转给北京总部的一个项目组做了，还有些项目夭折了，不过下面提到的都不是凭空捏造的，代码面试的时候可以现场看并针对性地提问，我面试时会带上电脑^_^。',
+        '开发过一个车险投保PC端管理系统，起初使用Vue1全家桶开发，后期应领导要求（为了便于让后端同事也能参与开发）进行了重构，采用了传统的iframe + jQuery + html模版（handlebars）开发模式，自行封装了弹框、分页、日期等组件，和路由、页面打印、无限嵌套的勾选树等功能。该项目后来转交给北京项目组了。',
+        '开发过一个车辆估损PC端管理系统，使用Vue1全家桶开发，有个通过Websocket实时通讯的功能，管理平台内勤最多同时被分配4个微信端用户，聊天支持文本和图片，支持120个微信基础表情。',
+        ''
+      ],
+      gitUrl: '',
+      demoUrl: '',
+      imgUrl: ''
     }
-    // {
-    //   title: '车险投保PC端管理系统',
-    //   keyword: '2012.11-Now',
-    //   description: [
-    //     '未使用框架（jQuery是库不是框架）',
-    //     '无限嵌套的勾选树',
-    //     '打印'
-    //   ],
-    //   gitUrl: '',
-    //   demoUrl: '',
-    //   imgUrl: ''
-    // },
-    // {
-    //   title: '车辆估损PC端后台管理系统',
-    //   keyword: '2012.11-Now',
-    //   description: [
-    //     'Vue1、websocket聊天、图片上传'
-    //   ],
-    //   gitUrl: '',
-    //   demoUrl: '',
-    //   imgUrl: ''
-    // },
     // {
     //   title: '车险比价微信端项目',
     //   keyword: '2012.11-Now',
