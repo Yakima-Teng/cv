@@ -18,7 +18,7 @@ const skills = {
       percentage: '95%'
     },
     {
-      keywords: '快速上手: webpack, gulp, vue/react/angular全家桶（框架、路由、状态管理），jQuery',
+      keywords: '熟悉: webpack、gulp、vue/react全家桶（框架、路由、状态管理）、jQuery、git、sublime、IDEA',
       percentage: '95%'
     },
     {

@@ -7,6 +7,7 @@ let app = new Vue({
 	el: 'html',
 	data: {
 		homepageTitle: 'Yakima Teng\'s CV',
+		showBody: false,
 		menus,
 		skills,
 		basic,
@@ -58,6 +59,9 @@ let app = new Vue({
 		}
 	},
 	created () {
+		setTimeout(() => {
+			this.showBody = true
+		}, 150)
 		// let _this = this
 		// const promiseBooks = $.ajax({
 		// 	url: '//yakima.duapp.com/douban/v2/book/user/cleveryun/collections',

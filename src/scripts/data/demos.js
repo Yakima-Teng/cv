@@ -22,10 +22,21 @@ const demos = {
       imgUrl: 'img/qrcode_CloudFB_1.jpg'
     },
     {
+      title: '石竹科技微信端',
+      keyword: '微信端、数据持久化、vue项目优化',
+      description: [
+        '私活项目+1。有产品展示、需求招投标、微信消息推送、微信多客服、公告管理、服务/产品预购等功能。该项目进行了本地数据持久化，并根据已有的VueJS开发经验对项目进行了优化，封装了滚动加载更多等常用组件。',
+        '以前曾在知乎上写过一个自己积累的优化经验。具体可点击链接查看：<a href="https://www.zhihu.com/question/38213423/answer/190371519">国内有哪些公司在用Vue.js，有什么开发心得？</a>'
+      ],
+      gitUrl: '',
+      demoUrl: '',
+      imgUrl: ''
+    },
+    {
       title: '咕咕机学习',
       keyword: '网页转图片',
       description: [
-        '这个公众号找不到二维码，需要在微信里手动输入“咕咕机学习”搜索添加。重点说“答案”这个微信菜单。项目团队：3后端+1前端。耗时约1个月（私活项目）。',
+        '私活项目+1。这个公众号找不到二维码，需要在微信里手动输入“咕咕机学习”搜索添加。重点说“答案”这个微信菜单。项目团队：3后端+1前端。耗时约1个月（私活项目）。',
         '点击打开页面后输入题号可以搜索显示对应题目的问题、答案和解析，然后在页面底部会出现一个打印按钮，点击后会请求服务端去跟用户绑定的咕咕机设备（一种打印机）通讯（发送图片给咕咕机），后者会直接将图片进行打印。',
         '项目难点在于数学题目涉及到数学公式和图片较多，最终的解决方案是后端同事用java类库对语文和英语题目生成图片（html简单文本转图片，速度快），我用node将数学题目对应的网页转成图片（将PhantomJS无界面webkit内核浏览器打开的网页转图片，不稳定，需要写守护进程，而且因为需等待js渲染数学公式，速度极慢，平均6s一张图，用两个服务器跑了两三天的程序才跑完数学题目，但是效果较好）。'
       ],
@@ -42,7 +53,7 @@ const demos = {
         '注册功能目前存在未解决的技术问题，网上大部分demo都是新建数据库，我要跟现有的数据库打通，所以没啥帮助。有一种方法是访问Wordpress提供的用户相关API，但是我想直接跟数据库里的账号信息进行比对，在把Wordpress保存的密码在Node端进行加解密这块算是卡住了。'
       ],
       gitUrl: 'https://git.oschina.net/yakima/blog',
-      demoUrl: 'http://yakima.oschina.io/blog',
+      demoUrl: '',
       imgUrl: 'img/post_English.png'
     },
     {
@@ -63,7 +74,7 @@ const demos = {
       title: 'mock server',
       keyword: '服务端数据模拟、请求转发',
       description: [
-        '服务器端数据模拟，方便前端工程师独立于后端进行开发。支持请求转发、响应静态JSON文件数据、响应自定义动态数据（内置mockjs），详细说明请点击上面链接地址（项目源码）查看README.md文档'
+        '业余时间写的一个工具。用于服务器端数据模拟，方便前端工程师独立于后端进行开发。支持请求转发、响应静态JSON文件数据、响应自定义动态数据（内置mockjs），详细说明请点击上面链接地址（<a href="https://git.oschina.net/yakima/mock-server">项目源码</a>）查看README.md文档'
       ],
       gitUrl: 'https://git.oschina.net/yakima/mock-server',
       demoUrl: '',
@@ -73,9 +84,10 @@ const demos = {
       title: '项目脚手架',
       keyword: 'react, vue, iframe+jQuery+handlebars, webpack，gulp',
       description: [
-        'Vue项目脚手架：根据Vue官方webpack模版改造出了一个vue2项目开发环境，vue2 + vue-router + vuex + webpack + ES6 support + babel + eslint，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/blog-admin">源代码</a>、<a href="http://yakima.oschina.io/blog-admin">demo</a>',
-        'React项目脚手架：为了在开发react项目时能有和开发vue项，根据vue-cli webpack模版改编出了一个react项目开发环境，react + react-router + webpack + ES6 support + babel + eslint，预置了几个动画效果，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/demos">源代码</a>、<a href="http://yakima.oschina.io/demos">demo</a>。',
-        'iframe项目脚手架：基于iframe + jQuery + handlebars + gulp实现的类SPA应用开发环境，适用于有对前端了解较少的后端同学需要一起参与前端开发工作的的项目，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/iframe-application">源代码</a>、<a href="http://yakima.oschina.io/iframe-application">demo</a>'
+        '这几个脚手架是以前写的，其实我自己也不用，只是借此熟悉下架构^_^。',
+        'Vue项目脚手架：根据Vue官方webpack模版改造出了一个vue2项目开发环境，vue2 + vue-router + vuex + webpack + ES6 support + babel + eslint，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/blog-admin">源代码</a>。',
+        'React项目脚手架：为了在开发react项目时能有和开发vue项，根据vue-cli webpack模版改编出了一个react项目开发环境，react + react-router + webpack + ES6 support + babel + eslint，预置了几个动画效果，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/demos">源代码</a>。',
+        'iframe项目脚手架：基于iframe + jQuery + handlebars + gulp实现的类SPA应用开发环境，适用于有对前端了解较少的后端同学需要一起参与前端开发工作的的项目，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/iframe-application">源代码</a>。'
       ],
       gitUrl: '',
       demoUrl: '',

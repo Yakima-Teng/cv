@@ -58,6 +58,13 @@ img {
   color: #fff;
 }
 /*page content*/
+.body {
+  opacity: 0;
+  transition: 800ms all linear 0ms;
+  &.show-body {
+    opacity: 1;
+  }
+}
 .page-content {
   position: relative;
   width: 980px;
