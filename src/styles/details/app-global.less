@@ -21,11 +21,6 @@ h4 {
 }
 
 /*global styles*/
-body {
-  font: 16px/1.5 arial, helvetics, sans-serif;
-  background: rgba(0, 0, 0, .2) url('../img/sky.jpg') no-repeat fixed center center /cover;
-  padding-bottom: 50px;
-}
 #wrapper {
   width: 98%;
   margin: 0 auto;
@@ -60,14 +55,19 @@ img {
 .white {
   color: #fff;
 }
-/*page content*/
-.body {
+body {
+  font: 16px/1.5 arial, helvetics, sans-serif;
+  background: #fff no-repeat fixed center center;
+  background-size: cover;
+  padding-bottom: 50px;
   opacity: 0;
   transition: 800ms all linear 0ms;
   &.show-body {
     opacity: 1;
+    background-image: url('../img/sky.jpg');
   }
 }
+/*page content*/
 .page-content {
   position: relative;
   width: 980px;

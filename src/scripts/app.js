@@ -59,9 +59,10 @@ let app = new Vue({
 		}
 	},
 	created () {
-		setTimeout(() => {
-			this.showBody = true
-		}, 150)
+		const _this = this
+		loadImage('./img/sky.jpg', () => {
+      _this.showBody = true
+		})
 		// let _this = this
 		// const promiseBooks = $.ajax({
 		// 	url: '//yakima.duapp.com/douban/v2/book/user/cleveryun/collections',
@@ -108,3 +109,17 @@ let app = new Vue({
 $(document).ready(() => {
   $('.lazy').lazyload()
 })
+
+function loadImage(url, callback) {
+  const img = new Image()
+  img.src = url
+  // 如果图片已经存在于浏览器缓存，直接调用回调函数
+  if(img.complete) {
+    callback.call(img)
+    return
+  }
+  //图片下载完毕时异步调用callback函数
+  img.onload = function () {
+    callback.call(img)
+  }
+}
