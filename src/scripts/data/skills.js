@@ -6,7 +6,7 @@
 const skills = {
   items: [
     {
-      keywords: '1年半的VueJS微信端SPA开发经验，熟悉微信JSSDK，有Angular1项目重构经验，参与过一个RN项目开发',
+      keywords: '近2年VueJS微信端SPA开发经验，熟悉微信JSSDK，有Angular1项目重构经验，参与过一个React Native项目',
       percentage: '95%'
     },
     {
@@ -18,11 +18,11 @@ const skills = {
       percentage: '95%'
     },
     {
-      keywords: '熟悉: webpack、gulp、vue/react全家桶（框架、路由、状态管理）、jQuery、git、sublime、IDEA',
+      keywords: '熟悉: webpack、gulp、vue/react全家桶（框架、路由、状态管理）、jQuery、git、sublime text、IDEA',
       percentage: '95%'
     },
     {
-      keywords: '其他：能在MAC OS下熟练开发，能用Express+MySql开发简单的博客系统并部署到linux服务器上',
+      keywords: '其他：能在MAC OS下熟练开发，能用Express+MySql开发简单的博客系统并部署到Linux服务器上',
       percentage: '95%'
     }
   ]
