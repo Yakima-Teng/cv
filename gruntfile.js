@@ -10,6 +10,26 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     clean: [WWW],
+    scp: {
+      options: {
+        host: '103.44.28.13',
+        port: 22,
+        username: 'username',
+        password: 'password'
+      },
+      your_target: {
+        files: [
+          {
+            cwd: 'dist',
+            // all files under dist folder will be deployed to the server
+            src: '**/*',
+            filter: 'isFile',
+            // path on the server
+            dest: '/var/www/html/yxeye.com/public_html/yakima/public/projects'
+          }
+        ]
+      }
+    },
     jshint: {
       // define the files to lint
       files: ['Gruntfile.js', SOURCE + 'scripts/*.js', SOURCE + 'scripts/data/*.js'],
@@ -181,5 +201,7 @@ module.exports = function (grunt) {
   grunt.registerTask('image', ['copy:img'])
 
   grunt.registerTask('dev', ['clean', 'html', 'css', 'js', 'image', 'connect:server', 'watch'])
+
+  grunt.registerTask('deploy', ['scp'])
 
 }
