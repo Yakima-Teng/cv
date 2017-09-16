@@ -25,12 +25,12 @@ const demos = {
       title: '石竹科技微信端',
       keyword: '微信端、数据持久化、vue项目优化',
       description: [
-        '私活项目+1。有产品展示、需求招投标、微信消息推送、公告管理、服务/产品预购等功能。该项目进行了<strong>本地数据持久化</strong>，并根据已有的VueJS开发经验对项目进行了优化，封装了滚动加载更多等常用组件。',
+        '项目将于近期上线，您访问的时候有可能还未上线。私活项目+1。有产品展示、需求招投标、微信消息推送、公告管理、服务/产品预购等功能。该项目进行了<strong>本地数据持久化</strong>，并根据已有的VueJS开发经验对项目进行了优化，封装了滚动加载更多等常用组件。',
         '以前曾在知乎上写过一个自己积累的<strong>Vue2项目优化经验</strong>。具体可点击链接查看：<a href="https://www.zhihu.com/question/38213423/answer/190371519">国内有哪些公司在用Vue.js，有什么开发心得？</a>'
       ],
       gitUrl: '',
       demoUrl: '',
-      imgUrl: ''
+      imgUrl: 'img/shizhukeji.png'
     },
     {
       title: '咕咕机学习',
