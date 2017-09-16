@@ -6,7 +6,7 @@
 let app = new Vue({
 	el: 'html',
 	data: {
-		l: 'CH',
+		l: 'EN',
 		showBody: false,
 		menus,
 		skills,
@@ -72,7 +72,7 @@ let app = new Vue({
 		loadImage('./img/sky.jpg', () => {
       _this.showBody = true
 		})
-		this.l = window.localStorage.getItem('l') || 'En'
+		this.l = window.localStorage.getItem('l') || 'EN'
 		// let _this = this
 		// const promiseBooks = $.ajax({
 		// 	url: '//yakima.duapp.com/douban/v2/book/user/cleveryun/collections',
