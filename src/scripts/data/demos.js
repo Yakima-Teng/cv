@@ -68,7 +68,7 @@ const demos = {
       ],
       gitUrl: '',
       demoUrl: '',
-      imgUrl: ''
+      imgUrl: 'img/code_wechat_cby_production.jpeg'
     },
     {
       title: 'mock server',
