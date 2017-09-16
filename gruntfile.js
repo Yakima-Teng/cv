@@ -12,7 +12,7 @@ module.exports = function (grunt) {
     clean: [WWW],
     scp: {
       options: {
-        host: '103.44.28.13',
+        host: '111.11.11.11',
         port: 22,
         username: 'username',
         password: 'password'
