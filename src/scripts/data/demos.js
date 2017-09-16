@@ -128,7 +128,7 @@ const demos = {
           'Developed a PC admin platform for car insurances. It was first developed using Vue1, and later refactored to using traditional iframe + jQuery + html template language (handlebars) to make it convenient for backend developers to participate in. Components like alert popup, page navigation, datepicker, and functions like router, printing, nested checkboxes are encapsulated. This project was transferred to Beijing team.',
           'Developed a PC admin platform for assessment of car damage loss. Developed using Vue1 + vue-router + vuex. Websocket was employed to make <strong>real-time communication</strong> available (support text, image, and 120 basic wechat emotions).',
           'Participated in a long-term project outsourced by China Pacific Insurance using <strong>React Native + Redux + flow (a static type checker for js)</strong>. Responsible for user subscription emails binding and user avatar updating.',
-          'The most important project was a <strong>mobile project (car insurances) used in Wechat and APP (iOS & Android)</strong>. Vue2 + webpack were used. Functions like sharing, uploading images, payment supported by Wechat JS SDK were covered (I know how to build a simple Wechat backend server using Node).'
+          'The most important project was a <strong>mobile project (car insurances) used in Wechat and APP (iOS & Android)</strong>. Vue2 + webpack were used. Functions like sharing, uploading images, payment supported by Wechat JS SDK were involved (I know how to build a simple Wechat backend server using Node).'
         ]
       },
       gitUrl: '',

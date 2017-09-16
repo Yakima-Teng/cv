@@ -23,9 +23,9 @@
 
   <article class="page-content">
     <div class="page-utilities clearfix text-center">
-      <span class="float-left">{{l === 'CH' ? '中文简历' : 'Chinese CV'}}</span>
-      <span @click="toggleLanguage">{{l === 'CH' ? 'English Version' : '中文版'}}</span>
-      <span class="float-right">{{l === 'CH' ? '英文简历' : 'English CV'}}</span>
+      <a href="./CV_Frontend_Yakima_CH.pdf" class="item float-left">{{l === 'CH' ? '中文简历下载' : 'Chinese CV Download'}}</a>
+      <span @click="toggleLanguage" class="item">{{l === 'CH' ? 'English Version' : '中文版'}}</span>
+      <a href="./CV_Frontend_Yakima_EN.pdf" class="item float-right">{{l === 'CH' ? '英文简历下载' : 'English CV Download'}}</a>
     </div>
     <section v-for="(index, item) in menus" class="page-section">
       <aside class="section-sidebar">
@@ -117,7 +117,7 @@
       </template>
     </section>
 
-    <div class="shut">申请离职中...</div>
+    <div class="shut">{{l === 'CH' ? '离职中...' : 'To leave...'}}</div>
   </article> <!--结束section#frames-->
 
   <div class="decoration"></div>

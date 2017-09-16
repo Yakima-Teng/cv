@@ -12,7 +12,7 @@ module.exports = function (grunt) {
     clean: [WWW],
     scp: {
       options: {
-        host: '111.11.11.11',
+        host: '222.22.22.22',
         port: 22,
         username: 'username',
         password: 'password'
@@ -132,6 +132,17 @@ module.exports = function (grunt) {
             filter: 'isFile'
           }
         ]
+      },
+      cv: {
+        files: [
+          {
+            expand: true,
+            src: [SOURCE + '../*.pdf'],
+            dest: DEST,
+            flatten: true,
+            filter: 'isFile'
+          }
+        ]
       }
     },
     // imagemin: {
@@ -197,10 +208,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask('html', ['copy:main'])
 
+  grunt.registerTask('cv', ['copy:cv'])
+
   // grunt.registerTask('image', ['imagemin:dynamic'])
   grunt.registerTask('image', ['copy:img'])
 
-  grunt.registerTask('dev', ['clean', 'html', 'css', 'js', 'image', 'connect:server', 'watch'])
+  grunt.registerTask('dev', ['clean', 'html', 'cv', 'css', 'js', 'image', 'connect:server', 'watch'])
 
   grunt.registerTask('deploy', ['scp'])
 
