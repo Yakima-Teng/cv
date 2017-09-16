@@ -11,10 +11,10 @@
 </head>
 <body :class="{'show-body': showBody}" class="body transition">
   <header class="page-header">
-    <nav class="transition">
-      <ul>
-        <li v-for="x in menus">
-          <a :href="'#' + x.hash" v-on:click.prevent="scroll">{{x.title[l]}}</a>
+    <nav class="nav">
+      <ul class="ul">
+        <li v-for="x in menus" class="li">
+          <a :href="'#' + x.hash" v-on:click.prevent="scroll" class="link">{{x.title[l]}}</a>
         </li>
       </ul>
     </nav>
@@ -24,15 +24,15 @@
   <article class="page-content">
     <div class="page-utilities clearfix text-center">
       <a href="./CV_Frontend_Yakima_CH.pdf" class="item float-left">{{l === 'CH' ? '中文简历下载' : 'Chinese CV Download'}}</a>
-      <span @click="toggleLanguage" class="item">{{l === 'CH' ? 'English Version' : '中文版'}}</span>
+      <a @click.prevent="toggleLanguage" class="item">{{l === 'CH' ? 'English Version' : '中文版'}}</a>
       <a href="./CV_Frontend_Yakima_EN.pdf" class="item float-right">{{l === 'CH' ? '英文简历下载' : 'English CV Download'}}</a>
     </div>
     <section v-for="(index, item) in menus" class="page-section">
       <aside class="section-sidebar">
         <nav class="menu">
-          <ul>
-            <li v-for="x in menus">
-              <a :class="{'active': ($index == index)}" :href="'#' + x.hash" @click.prevent="scroll">{{x.title[l]}}</a>
+          <ul class="items">
+            <li v-for="x in menus" class="item">
+              <a :class="{'active': ($index == index)}" :href="'#' + x.hash" @click.prevent="scroll" class="text">{{x.title[l]}}</a>
             </li>
           </ul>
         </nav>
@@ -40,10 +40,10 @@
       <template v-if="item.hash === 'basic'">
         <article :id="item.hash" class="section-content h260">
           <ul class="shadow-box clearfix">
-            <li v-for="x in basic.items">
-              <h3>{{x.title[l}}</h3>
-              <ul>
-                <li v-for="y in x.details[l]">{{y}}</li>
+            <li v-for="x in basic.items" class="list">
+              <h3 class="title">{{x.title[l]}}</h3>
+              <ul class="items">
+                <li v-for="y in x.details[l]" class="item">{{y}}</li>
               </ul>
             </li>
           </ul>
@@ -52,7 +52,7 @@
       <template v-if="item.hash === 'skills'">
         <article :id="item.hash" class="section-content">
           <ul class="arrow-box">
-            <li v-for="x in skills.items" :style="{width: x.percentage}" class="item">
+            <li v-for="x in skills.items" class="item">
               <a class="link" @click.prevent="" href="##">{{x.desc[l]}}</a>
             </li>
           </ul>
@@ -91,7 +91,7 @@
       </template>
       <template v-if="item.hash === 'career'">
         <article :id="item.hash" class="section-content">
-          <h4 class="text-center">{{career.note[l]}}</h4>
+          <h4 class="note-title">{{career.note[l]}}</h4>
           <ul class="list-box text-center">
             <li v-for="x in career.items">
               <ul class="list-item">
@@ -103,13 +103,13 @@
       </template>
       <template v-if="item.hash === 'footprints'">
         <article :id="item.hash" class="section-content">
-          <h4 class="text-center">{{footprints.note[l]}}</h4>
+          <h4 class="note-title">{{footprints.note[l]}}</h4>
           <ul class="card-box text-center">
-            <li v-for="x in footprints.details">
+            <li v-for="x in footprints.details" class="item">
               <a :href="x.destinationUrl" class="card transition">
                 <span :style="{'background-image': 'url(' + x.imgUrl + ')'}" class="img"></span>
                 <!-- <img :data-original="x.imgUrl" :alt="x.title" class="lazy"> -->
-                <aside class="transition">{{x.title[l]}}</aside>
+                <aside class="desc transition">{{x.title[l]}}</aside>
               </a>
             </li>
           </ul>

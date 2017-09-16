@@ -1,64 +1,73 @@
 /*page header*/
-.page-header {
-	padding-top: 50px;
-	text-align: center;
-	nav {
-		position: fixed;
-		display: block;
-		left: 0;
-		top: 0;
-		padding: 7px;
-		width: 100%;
-		background-color: rgba(0, 0, 0, 0.6);
-		z-index: 100;
-	}
-	ul {
-		display: block;
-		font-size: 0;
-	}
-	li {
-		position: relative;
-		display: inline-block;
-		font-size: 16px;
-		border-radius: 30px 0;
-		transition: 300ms background-color ease-out 300ms;
-		&:nth-child(3n+1) {
-			background-color: rgba(78, 184, 234, 0.5);
-			&:hover {
-				background-color: rgba(78, 184, 234, 0.9);
-			}
-		}
-		&:nth-child(3n+2) {
-			background-color: rgba(214, 230, 54, 0.5);
-			&:hover {
-				background-color: rgba(214, 230, 54, 0.9);
-			}
-		}
-		&:nth-child(3n) {
-			background-color: rgba(245, 140, 33, 0.5);
-			&:hover {
-				background-color: rgba(245, 140, 33, 0.9);
-			}
-		}
-		a {
+@media screen and (min-width: 980px) {
+	.page-header {
+		padding-top: 50px;
+		text-align: center;
+		.nav {
+			position: fixed;
 			display: block;
-			font-weight: bold;
-			height: 100%;
+			left: 0;
+			top: 0;
+			padding: 7px;
 			width: 100%;
-			box-sizing: border-box;
-			line-height: 1;
-			padding: 10px;
-			transition: 300ms color ease-in;
-			&:hover {
-				color: white;
+			background-color: rgba(0, 0, 0, 0.6);
+			z-index: 100;
+			transition: 300ms all linear 0ms;
+		}
+		.ul {
+			display: block;
+			font-size: 0;
+		}
+		.li {
+			position: relative;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 30px 0;
+			transition: 300ms background-color ease-out 300ms;
+			&:nth-child(3n+1) {
+				background-color: rgba(78, 184, 234, 0.5);
+				&:hover {
+					background-color: rgba(78, 184, 234, 0.9);
+				}
+			}
+			&:nth-child(3n+2) {
+				background-color: rgba(214, 230, 54, 0.5);
+				&:hover {
+					background-color: rgba(214, 230, 54, 0.9);
+				}
+			}
+			&:nth-child(3n) {
+				background-color: rgba(245, 140, 33, 0.5);
+				&:hover {
+					background-color: rgba(245, 140, 33, 0.9);
+				}
+			}
+			.link {
+				display: block;
+				font-weight: bold;
+				height: 100%;
+				width: 100%;
+				box-sizing: border-box;
+				line-height: 1;
+				padding: 10px;
+				transition: 300ms color ease-in;
+				&:hover {
+					color: white;
+				}
 			}
 		}
+		.title {
+			display: inline-block;
+			font-size: 40px;
+			line-height: 1.5;
+			letter-spacing: -2px;
+			margin: 20px 0 10px;
+		}
 	}
-	h1 {
-		display: inline-block;
-		font-size: 40px;
-		line-height: 1.5;
-		letter-spacing: -2px;
-		margin: 0;
+}
+
+@media screen and (max-width: 979px) {
+	.page-header {
+		display: none;
 	}
 }

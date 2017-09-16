@@ -24,6 +24,18 @@
   }
 }
 
+@media screen and (max-width: 979px) {
+  .page-utilities {
+    margin-top: 20px;
+    .item {
+      display: none;
+      &:nth-of-type(2) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
 .clearfix() {
   &:after {
     content: '';

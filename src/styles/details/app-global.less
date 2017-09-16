@@ -68,25 +68,47 @@ body {
   }
 }
 /*page content*/
-.page-content {
-  position: relative;
-  width: 980px;
-  margin: 0 auto;
-}
-.section-sidebar, .section-content {
-  display: table-cell;
-  vertical-align: top;
-  border-bottom: 3px double black;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, .3) inset;
-}
-/*section-content in page-content*/
-.section-content {
-  width: 100%;
-  background-color: rgba(240, 160, 80, .5);
-  &.padding-bottom-l {
-    padding-bottom: 15px;
+@media screen and (min-width: 980px) {
+  .page-content {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
   }
-  &.h260 {
-    height: 260px;
+  .section-sidebar, .section-content {
+    display: table-cell;
+    vertical-align: top;
+    border-bottom: 3px double black;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .3) inset;
   }
+  .section-content {
+    width: 100%;
+    background-color: rgba(240, 160, 80, .5);
+    &.padding-bottom-l {
+      padding-bottom: 15px;
+    }
+    &.h260 {
+      height: 260px;
+    }
+  }
+}
+
+@media screen and (max-width: 979px) {
+  .page-content {
+    position: relative;
+  }
+  .section-sidebar {
+    display: block;
+  }
+  .section-content {
+    display: block;
+  }
+}
+
+.note-title {
+  font-size: 14px;
+  color: #1a5bef;
+  text-align: center;
+  line-height: 30px;
+  background-color: rgba(240, 160, 80, .8);
+  margin: 8px 0;
 }

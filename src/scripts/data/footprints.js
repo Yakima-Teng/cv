@@ -25,7 +25,7 @@ const footprints = {
         EN: 'Reading (130)'
       },
       text: 'book.douban.com/people/cleveryun/',
-      destinationUrl: 'https://book.douban.com/people/cleveryun/collect',
+      destinationUrl: 'https://book.douban.com/people/cleveryun/collect?sort=time&start=0&filter=all&mode=list&tags_sort=count',
       imgUrl: 'img/reading.jpg'
     },
     {

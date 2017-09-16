@@ -49,7 +49,7 @@ let app = new Vue({
 			const element = e.currentTarget
 			const targetId = $(element).prop('href').split('#')[1]
 			$('html,body').animate({
-				scrollTop: $('#' + targetId).position().top + 60 + 'px'
+				scrollTop: $('#' + targetId).position().top + 90 + 'px'
 			}, 300, () => {
 			// Animation complete
 			})

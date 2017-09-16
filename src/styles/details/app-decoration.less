@@ -35,14 +35,22 @@
 	}
 }
 /*开始页面左侧闲逛装饰效果*/
-.decoration {
-	width: 0px; height: 0px;
-	border: 2em solid;
-	border-radius: 2em;
-	border-color: transparent transparent transparent rgba(78, 184, 234, .5);
-	position: fixed;
-	left: 0px;
-	top: 50%;
-	animation: wander 10s linear 0s infinite alternate running;
+@media screen and (min-width: 120px) {
+	.decoration {
+		width: 0;
+		height: 0;
+		border: 2em solid;
+		border-radius: 2em;
+		border-color: transparent transparent transparent rgba(78, 184, 234, .5);
+		position: fixed;
+		left: 0;
+		top: 50%;
+		animation: wander 10s linear 0s infinite alternate running;
+	}
+}
+@media screen and (max-width: 119px) {
+	.decoration {
+		display: none;
+	}
 }
 /*结束页面外围闲逛装饰效果*/
