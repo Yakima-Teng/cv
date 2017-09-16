@@ -6,6 +6,7 @@
 let app = new Vue({
 	el: 'html',
 	data: {
+		l: 'CH',
 		showBody: false,
 		menus,
 		skills,
@@ -34,7 +35,16 @@ let app = new Vue({
 		// 	]
 		// }
 	},
+	watch: {
+		'l': function (newVal, oldVal) {
+			window.localStorage.setItem('l', newVal)
+		}
+	},
 	methods: {
+		toggleLanguage () {
+			const { l } = this
+			this.l = l === 'CH' ? 'EN' : 'CH'
+		},
 		scroll (e) {
 			const element = e.currentTarget
 			const targetId = $(element).prop('href').split('#')[1]
@@ -62,6 +72,7 @@ let app = new Vue({
 		loadImage('./img/sky.jpg', () => {
       _this.showBody = true
 		})
+		this.l = window.localStorage.getItem('l') || 'En'
 		// let _this = this
 		// const promiseBooks = $.ajax({
 		// 	url: '//yakima.duapp.com/douban/v2/book/user/cleveryun/collections',

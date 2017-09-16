@@ -14,25 +14,25 @@
     <nav class="transition">
       <ul>
         <li v-for="x in menus">
-          <a :href="'#' + x.hash" v-on:click.prevent="scroll">{{x.title}}</a>
+          <a :href="'#' + x.hash" v-on:click.prevent="scroll">{{x.title[l]}}</a>
         </li>
       </ul>
     </nav>
-    <h1>{{homepageTitle}}</h1>
+    <h1>{{l === 'CH' ? '滕运锋的简历' : 'Yakima Teng\' CV'}}</h1>
   </header>
 
   <article class="page-content">
     <div class="page-utilities clearfix text-center">
-      <span class="float-left">滕运锋</span>
-      <span>欢迎</span>
-      <span class="float-right">Yakima Teng</span>
+      <span class="float-left">{{l === 'CH' ? '中文简历' : 'Chinese CV'}}</span>
+      <span @click="toggleLanguage">{{l === 'CH' ? 'English Version' : '中文版'}}</span>
+      <span class="float-right">{{l === 'CH' ? '英文简历' : 'English CV'}}</span>
     </div>
     <section v-for="(index, item) in menus" class="page-section">
       <aside class="section-sidebar">
         <nav class="menu">
           <ul>
             <li v-for="x in menus">
-              <a :class="{'active': ($index == index)}" :href="'#' + x.hash" @click.prevent="scroll">{{x.title}}</a>
+              <a :class="{'active': ($index == index)}" :href="'#' + x.hash" @click.prevent="scroll">{{x.title[l]}}</a>
             </li>
           </ul>
         </nav>
@@ -41,9 +41,9 @@
         <article :id="item.hash" class="section-content h260">
           <ul class="shadow-box clearfix">
             <li v-for="x in basic.items">
-              <h3>{{x.title}}</h3>
+              <h3>{{x.title[l}}</h3>
               <ul>
-                <li v-for="y in x.details">{{y}}</li>
+                <li v-for="y in x.details[l]">{{y}}</li>
               </ul>
             </li>
           </ul>
@@ -53,19 +53,7 @@
         <article :id="item.hash" class="section-content">
           <ul class="arrow-box">
             <li v-for="x in skills.items" :style="{width: x.percentage}" class="item">
-              <a class="link" @click.prevent="" href="##">{{x.keywords}}</a>
-            </li>
-          </ul>
-        </article>
-      </template>
-      <template v-if="item.hash === 'career'">
-        <article :id="item.hash" class="section-content">
-          <h4 class="text-center">{{career.note}}</h4>
-          <ul class="list-box text-center">
-            <li v-for="x in career.items">
-              <ul class="list-item">
-                <li v-for="y in x"><span>{{y}}</span></li>
-              </ul>
+              <a class="link" @click.prevent="" href="##">{{x.desc[l]}}</a>
             </li>
           </ul>
         </article>
@@ -75,9 +63,9 @@
           <ul class="demo-box">
             <li v-for="x in demos.items" class="demo">
               <header class="header">
-                <div class="left">{{x.title}}</div>
+                <div class="left">{{x.title[l]}}</div>
                 <div class="right">
-                  <span class="text">{{x.keyword}}</span>
+                  <span class="text">{{x.keyword[l]}}</span>
                 </div>
               </header>
               <article class="article">
@@ -89,11 +77,11 @@
                   :class="{'has-img': !!x.imgUrl}"
                   class="right">
                   <h3 class="urls">
-                    <a v-show="x.demoUrl" :href="x.demoUrl" class="demo-link">在线地址</a>
-                    <a v-show="x.gitUrl" :href="x.gitUrl" class="code-link">项目源码</a>
+                    <a v-show="x.demoUrl" :href="x.demoUrl" class="demo-link">{{l === 'CH' ? '在线地址' : 'Online Demo'}}</a>
+                    <a v-show="x.gitUrl" :href="x.gitUrl" class="code-link">{{l === 'CH' ? '项目源码' : 'Source Code'}}</a>
                   </h3>
                   <article class="content">
-                    <p v-for="y in x.description" class="paragraph" v-html="y"></p>
+                    <p v-for="y in x.description[l]" class="paragraph" v-html="y"></p>
                   </article>
                 </section>
               </article>
@@ -101,15 +89,27 @@
           </ul>
         </article>
       </template>
+      <template v-if="item.hash === 'career'">
+        <article :id="item.hash" class="section-content">
+          <h4 class="text-center">{{career.note[l]}}</h4>
+          <ul class="list-box text-center">
+            <li v-for="x in career.items">
+              <ul class="list-item">
+                <li v-for="y in x[l]"><span>{{y}}</span></li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+      </template>
       <template v-if="item.hash === 'footprints'">
         <article :id="item.hash" class="section-content">
-          <h4 class="text-center">通过以下链接可以了解我的日常^_^</h4>
+          <h4 class="text-center">{{footprints.note[l]}}</h4>
           <ul class="card-box text-center">
             <li v-for="x in footprints.details">
               <a :href="x.destinationUrl" class="card transition">
                 <span :style="{'background-image': 'url(' + x.imgUrl + ')'}" class="img"></span>
                 <!-- <img :data-original="x.imgUrl" :alt="x.title" class="lazy"> -->
-                <aside class="transition">{{x.title}}</aside>
+                <aside class="transition">{{x.title[l]}}</aside>
               </a>
             </li>
           </ul>

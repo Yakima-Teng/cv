@@ -5,27 +5,38 @@
  ***********************************************************************************/
 const menus = [
   {
-    title: '基本信息',
+    title: {
+      CH: '基本信息',
+      EN: 'Profile'
+    },
     hash: 'basic'
   },
   {
-    title: '技能描述',
+    title: {
+      CH: '技能描述',
+      EN: 'Skills'
+    },
     hash: 'skills',
   },
   {
-    title: '项目经历',
+    title: {
+      CH: '项目经历',
+      EN: 'Projects'
+    },
     hash: 'demos'
   },
   {
-    title: '工作经历',
+    title: {
+      CH: '工作经历',
+      EN: 'Work'
+    },
     hash: 'career'
   },
-  // {
-  //   title: '教育背景',
-  //   hash: 'education'
-  // },
   {
-    title: '江湖足迹',
+    title: {
+      CH: '江湖足迹',
+      EN: 'Footprints'
+    },
     hash: 'footprints'
   }
 ]

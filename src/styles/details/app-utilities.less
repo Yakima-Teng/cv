@@ -1,24 +1,27 @@
 /*page-utilities in page-content*/
-.page-utilities span {
-  display: inline-block;
-  color: rgba(255, 255, 255, .9);
-  width: 11em;
-  height: 30px;
-  line-height: 30px;
-  border: 2px dashed rgba(240, 160, 80, .3);
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, .3) inset;
-  background-color: rgba(0, 0, 0, .2);
-  border-radius: 20px 20px 0 0;
-  transition: all 500ms linear;
-}
-.page-utilities span:hover {
-  color: rgba(255, 255, 255, 1);
-  /*width: 15em;*/
-  border-color: rgba(240, 160, 80, 0.9);
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, .1) inset;
-  background-color: rgba(0, 0, 0, .5);
-  border-radius: 80px 80px 0 0;
-  cursor: pointer;
+.page-utilities {
+  span {
+    display: inline-block;
+    color: rgba(255, 255, 255, .9);
+    width: 11em;
+    height: 30px;
+    line-height: 30px;
+    border: 2px dashed rgba(240, 160, 80, .3);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .3) inset;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 20px 20px 0 0;
+    transition: all 500ms linear;
+    user-select: none;
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+      /*width: 15em;*/
+      border-color: rgba(240, 160, 80, 0.9);
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, .1) inset;
+      background-color: rgba(0, 0, 0, .5);
+      border-radius: 80px 80px 0 0;
+      cursor: pointer;
+    }
+  }
 }
 
 .clearfix() {
