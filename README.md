@@ -1,5 +1,9 @@
 # CV of Yakima Teng
 
+## Introduction
+
+This is a repository for me to generate my CV. If you like it, you can fork it and revise the content to be what is appropriate to you, to generate your desired online CV ^_^. I use grunt to establish the development environment. But grunt is a little slow in reaction speed. So please keep patient when using this development environment. Because this is the only project I use grunt and I need a demo for grunt usage, I would probably not replace grunt with gulp or other substitute goods. However, I really recommended you to re-establish the development environment if you will use this project code for quite a while. 
+
 ## Screenshots
 
 What this CV looks like in PC:
