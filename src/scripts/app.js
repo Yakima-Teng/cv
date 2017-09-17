@@ -94,7 +94,6 @@ let app = new Vue({
 		})
 
 		$(window).load(() => {
-			console.log('load')
 			scrollCallback()
 			resizeCallback()
 		})

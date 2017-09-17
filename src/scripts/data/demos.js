@@ -159,7 +159,7 @@ const demos = {
     {
       title: {
         CH: '项目脚手架',
-        EN: 'boilerplate'
+        EN: 'boilerplates'
       },
       keyword: {
         CH: 'react, vue, iframe+jQuery+handlebars, webpack，gulp',
@@ -179,7 +179,7 @@ const demos = {
       },
       gitUrl: '',
       demoUrl: '',
-      imgUrl: ''
+      imgUrl: 'img/react_boilerplate.png'
     }
   ]
 }
