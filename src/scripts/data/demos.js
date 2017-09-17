@@ -93,7 +93,7 @@ const demos = {
       },
       description: {
         CH: [
-          '个人项目，非私活。最早上线的是一个前端Angular SPA + 后端Node(Express框架)提供API接口的版本（数据库使用的是MySQL，模版引擎用的是EJS）。后期考虑到SEO的问题，在后端用EJS作为模版重写了一版本，在线地址：<a href="http://www.yxeye.com/blog">http://www.yxeye.com/blog</a>。',
+          '个人项目，非私活。最早上线的是一个前端Angular SPA + 后端Node(Express框架)提供API接口的版本（数据库使用的是MySQL，模版引擎用的是EJS）。由于码云Pages功能上的限制，直接访问项目在线地址会被跳转，请手动复制以下地址（http://yakima.oschina.io/blog）到浏览器地址栏回车查看效果。后期考虑到SEO的问题，在后端用EJS作为模版重写了一版本，在线地址：<a href="http://www.yxeye.com/blog">http://www.yxeye.com/blog</a>。',
           'Angular版本开发环境使用gulp，支持模版文件，请求转发等常见功能，发表评论的功能（支持<strong>嵌套评论</strong>）被我禁掉了，因为自己后端安全方面知识欠缺，数据库里的东西对我又很重要，开放这种往数据库里写数据的接口怕出问题。',
           '注册功能目前存在未解决的技术问题（与已有的wordpress程序创建的数据库打通账号），有一种方法是访问Wordpress提供的用户相关API，但是我想直接跟数据库里的账号信息进行比对，在把Wordpress保存的密码在Node端进行加解密这块卡住了。'
         ],
