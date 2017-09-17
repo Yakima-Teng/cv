@@ -1,81 +1,83 @@
 /*card-box*/
-.card-box {
-  padding-bottom: 20px;
-  .item {
-    display: inline-block;
-    width: 32%;
-    margin-left: 1%;
-    height: 200px;
-    &:nth-of-type(1) {
-      margin-left: 0;
-    }
-    &:nth-of-type(2n) {
-      &:hover {
-        .card {
+@media screen and (min-width: 980px) {
+  .card-box {
+    padding-bottom: 20px;
+    .item {
+      display: inline-block;
+      width: 32%;
+      margin-left: 1%;
+      height: 200px;
+      &:nth-of-type(1) {
+        margin-left: 0;
+      }
+      &:nth-of-type(2n) {
+        &:hover {
+          .card {
+            transform: rotateX(180deg);
+          }
+        }
+        .desc {
           transform: rotateX(180deg);
         }
       }
-      .desc {
-        transform: rotateX(180deg);
-      }
-    }
-    &:hover {
-      .card {
-        cursor: pointer;
-        transform: rotateY(180deg);
-      }
-      .desc {
-        z-index: 1;
-        opacity: 1;
-        visibility: visible;
-        &:after {
-          left: 100%;
+      &:hover {
+        .card {
+          cursor: pointer;
+          transform: rotateY(180deg);
+        }
+        .desc {
+          z-index: 1;
+          opacity: 1;
+          visibility: visible;
+          &:after {
+            left: 100%;
+          }
         }
       }
     }
-  }
-  .card {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: transparent scroll no-repeat center center;
-    background-size: cover;
-  }
-  .desc {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    line-height: 200px;
-    background-color: #0a0a0a;
-    color: yellow;
-    z-index: -1;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    transform: rotateY(180deg);
-    &:after {
-      content: '';
-      position: absolute;
-      transition: 300ms all linear 300ms;
-      top: 0;
-      left: -100%;
+    .card {
+      display: inline-block;
+      position: relative;
       width: 100%;
       height: 100%;
-      transform:skewx(-25deg);
-      /*正式写法的渐变没有加厂商前缀的好看。。。*/
-      background-image: linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
-      background-image: -ms-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
-      background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
-      background-image: -o-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
-      background-image:-webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    }
+    .img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: transparent scroll no-repeat center center;
+      background-size: cover;
+    }
+    .desc {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 200px;
+      background-color: #0a0a0a;
+      color: yellow;
+      z-index: -1;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      transform: rotateY(180deg);
+      &:after {
+        content: '';
+        position: absolute;
+        transition: 300ms all linear 300ms;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        transform:skewx(-25deg);
+        /*正式写法的渐变没有加厂商前缀的好看。。。*/
+        background-image: linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+        background-image: -ms-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+        background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+        background-image: -o-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+        background-image:-webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+      }
     }
   }
 }
@@ -83,13 +85,21 @@
 @media screen and (max-width: 979px) and (min-width: 400px) {
   .card-box {
     .item {
+      display: inline-block;
       position: relative;
       width: 30%;
       margin-left: 2.5%;
-      height: 0;
-      padding-top: 30%;
-      &:first-child {
+      height: 40px;
+      &:nth-of-type(1) {
         margin-left: 0;
+      }
+      &:nth-of-type(2n) {
+        .card {
+          transform: rotateX(180deg);
+        }
+        .desc {
+          transform: rotateX(180deg);
+        }
       }
     }
     .card {
@@ -98,6 +108,26 @@
       left: 0;
       width: 100%;
       height: 100%;
+      cursor: pointer;
+      transform: rotateY(180deg);
+    }
+    .img {
+      display: none;
+    }
+    .desc {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 40px;
+      background-color: #0a0a0a;
+      color: yellow;
+      opacity: 1;
+      visibility: visible;
+      overflow: hidden;
+      transform: rotateY(180deg);
+      z-index: 1;
     }
   }
 }
@@ -108,15 +138,20 @@
     .item {
       display: block;
       position: relative;
-      height: 0;
-      width: 100%;
-      padding-top: 100%;
-      margin: 0 auto;
+      height: 40px;
       &:nth-of-type(1) {
         margin-left: auto;
       }
       &:nth-of-type(n+2) {
         margin-top: 15px;
+      }
+      &:nth-of-type(2n) {
+        .card {
+          transform: rotateX(180deg);
+        }
+        .desc {
+          transform: rotateX(180deg);
+        }
       }
     }
     .card {
@@ -125,6 +160,26 @@
       left: 0;
       width: 100%;
       height: 100%;
+      cursor: pointer;
+      transform: rotateY(180deg);
+    }
+    .img {
+      display: none;
+    }
+    .desc {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 40px;
+      background-color: #0a0a0a;
+      color: yellow;
+      opacity: 1;
+      visibility: visible;
+      overflow: hidden;
+      transform: rotateY(180deg);
+      z-index: 1;
     }
   }
 }
