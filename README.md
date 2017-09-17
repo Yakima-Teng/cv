@@ -3,9 +3,11 @@
 ## Screenshots
 
 What this CV looks like in PC:
+
 ![](./screenshots/part1.png)
 
 What this CV looks like in mobile device:
+
 ![](./screenshots/part2.png)
 
 Established by Yakima Teng
