@@ -8,32 +8,13 @@ let app = new Vue({
 	data: {
 		l: 'EN',
 		showBody: false,
+		scrollOffset: 0,
 		menus,
 		skills,
 		basic,
-		// education,
 		career,
 		demos,
 		footprints
-		// books: {
-		// 	total: 0,
-		// 	details: [
-		// 		// {
-		// 		// 	book: {
-		// 		// 		title: '',
-		// 		// 		images: {
-		// 		// 			large: ''
-		// 		// 		},
-		// 		// 		isbn13: '',
-		// 		// 		summary: ''
-		// 		// 	},
-		// 		// 	rating: {
-		// 		// 		value: ''
-		// 		// 	},
-		// 		// 	updated: ''
-		// 		// }
-		// 	]
-		// }
 	},
 	watch: {
 		'l': function (newVal, oldVal) {
@@ -48,8 +29,9 @@ let app = new Vue({
 		scroll (e) {
 			const element = e.currentTarget
 			const targetId = $(element).prop('href').split('#')[1]
+			const { scrollOffset } = this
 			$('html,body').animate({
-				scrollTop: $('#' + targetId).position().top + 90 + 'px'
+				scrollTop: $('#' + targetId).position().top + scrollOffset + 'px'
 			}, 300, () => {
 			// Animation complete
 			})
@@ -73,45 +55,48 @@ let app = new Vue({
       _this.showBody = true
 		})
 		this.l = window.localStorage.getItem('l') || 'EN'
-		// let _this = this
-		// const promiseBooks = $.ajax({
-		// 	url: '//yakima.duapp.com/douban/v2/book/user/cleveryun/collections',
-		// 	type: 'GET',
-		// 	dataType: 'jsonp',
-		// 	jsonp: 'callback',
-		// 	data: {
-		// 		status: 'read'
-		// 	},
-		// 	timeout: 30000
-		// })
-		// promiseBooks.success(data => {
-		// 	_this.books.total = data.total
-		// 	_this.books.details = data.collections.map(item => {
-		// 		return {
-		// 			book: {
-		// 				title: item.book.title,
-		// 				images: {
-		// 					large: item.book.images.large
-		// 				},
-		// 				isbn13: item.book.isbn13,
-		// 				summary: item.book.summary
-		// 			},
-		// 			rating: {
-		// 				value: item.rating.value
-		// 			},
-		// 			updated: item.updated
-		// 		}
-		// 	})
-		// })
-		// promiseBooks.error(data => console.log(data))
 	},
 	ready () {
+		const _this = this
+		function scrollCallback () {
+      if ($(window).scrollTop() > 0) {
+        app.$emit('leaveTop');
+      } else {
+        app.$emit('onTop');
+      }
+		}
+
+		function resizeCallback () {
+      if ($(window).width() >= 980) {
+        _this.scrollOffset = 90
+      } else {
+        _this.scrollOffset = -18
+      }
+		}
+
+		let timerForScroll = null
 		$(window).scroll(() => {
-			if ($(window).scrollTop() > 0) {
-				app.$emit('leaveTop');
-			} else {
-				app.$emit('onTop');
+			if (timerForScroll) {
+				clearTimeout(timerForScroll)
 			}
+			timerForScroll = setTimeout(() => {
+        scrollCallback()
+			}, 250)
+		})
+		let timerForResize = null
+		$(window).resize(() => {
+			if (timerForResize) {
+				clearTimeout(timerForResize)
+			}
+			timerForResize = setTimeout(() => {
+        resizeCallback()
+			}, 250)
+		})
+
+		$(window).load(() => {
+			console.log('load')
+			scrollCallback()
+			resizeCallback()
 		})
 	}
 })
