@@ -1,5 +1,11 @@
 /*page-utilities in page-content*/
 .page-utilities {
+  &.shine {
+    .item {
+      animation: 300ms shine linear 0ms;
+      animation-iteration-count: 15;
+    }
+  }
   .item {
     display: inline-block;
     color: rgba(255, 255, 255, .9);
@@ -44,5 +50,23 @@
     visibility: hidden;
     opacity: 0;
     height: 0;
+  }
+}
+
+@keyframes shine {
+  0% {
+    box-shadow: -4px -4px 4px 1px rgba(255, 255, 0, 1);
+  }
+  25% {
+    box-shadow: 4px -4px 4px 1px rgba(255, 255, 0, 1);
+  }
+  50% {
+    box-shadow: 4px 4px 4px 1px rgba(255, 255, 0, 1);
+  }
+  75% {
+    box-shadow: -4px 4px 4px 1px rgba(255, 255, 0, 1);
+  }
+  100% {
+    box-shadow: -4px -4px 4px 1px rgba(255, 255, 0, 1);
   }
 }
