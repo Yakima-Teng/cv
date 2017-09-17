@@ -177,8 +177,8 @@ const demos = {
           'iframe boilerplate: appropriate for backend developers unfamiliar with new frontend skills, iframe + jQuery + handlebars + gulp. For details, please refer to: <a href="https://git.oschina.net/yakima/iframe-application">Source Code</a>.'
         ]
       },
-      gitUrl: '',
-      demoUrl: '',
+      gitUrl: 'https://git.oschina.net/yakima/demos',
+      demoUrl: 'http://www.yxeye.com/demos/index.html',
       imgUrl: 'img/react_boilerplate.png'
     }
   ]
