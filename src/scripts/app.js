@@ -6,7 +6,7 @@
 let app = new Vue({
 	el: 'html',
 	data: {
-		l: 'EN',
+		l: 'CH',
 		showBody: false,
 		scrollOffset: 0,
 		menus,
@@ -54,7 +54,7 @@ let app = new Vue({
 		loadImage('./img/sky.jpg', () => {
       _this.showBody = true
 		})
-		this.l = window.localStorage.getItem('l') || 'EN'
+		this.l = window.localStorage.getItem('l') || 'CH'
 	},
 	ready () {
 		const _this = this
