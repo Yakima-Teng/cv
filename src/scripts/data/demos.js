@@ -25,7 +25,7 @@ const demos = {
           '技术栈：Vue2全家桶+Webpack'
         ],
         EN: [
-          'A private project written in middle 2017. Team composition：2*Java + 1*Designer + 1*Frontend + 2*Backend. Time consumed: 1.5m for development and 3m for maintainence.',
+          'A side project written in middle 2017. Team composition：2*Java + 1*Designer + 1*Frontend + 2*Backend. Time consumed: 1.5m for development and 3m for maintainence.',
           'It\'s a <strong>bilingual</strong> project in the domain of <strong>supply chain finance</strong>, including an admin platform and a wechat mall. I\'m responsible for the wechat mall development. Covers shopping cart, order status management, and wechat payment.',
           'Vue2 + Vue-Router + Vuex + ES6 + Webpack + eslint'
         ]
@@ -49,7 +49,7 @@ const demos = {
           '以前曾在知乎上写过一个自己积累的<strong>Vue2项目优化经验</strong>。具体可点击链接查看：<a href="https://www.zhihu.com/question/38213423/answer/190371519">国内有哪些公司在用Vue.js，有什么开发心得？</a>'
         ],
         EN: [
-          'This private project will be puslished in the near furture, so you may find it unavailable to visit or function abnormally in these days. Covers wechat message push, product/service purchase in advance. This project employs <strong>Data persistence</strong> and is optimized as per my VueJS experience. Common components like alerting, confirming, and loading-more are encapsulated.',
+          'This side project will be puslished in the near furture, so you may find it unavailable to visit or function abnormally in these days. Covers wechat message push, product/service purchase in advance. This project employs <strong>Data persistence</strong> and is optimized as per my VueJS experience. Common components like alerting, confirming, and loading-more are encapsulated.',
           'I had once posted one article on topic of <strong>VueJS project optimization</strong>, for details, please refer to the following link: <a href="https://www.zhihu.com/question/38213423/answer/190371519">国内有哪些公司在用Vue.js，有什么开发心得？</a>'
         ]
       },
@@ -73,7 +73,7 @@ const demos = {
           '项目难点在于数学题目涉及到数学公式和图片较多，最终的解决方案是后端同事用java类库对语文和英语题目生成图片（html简单文本转图片，速度快），我用node将数学题目对应的网页转成图片（将PhantomJS无界面webkit内核浏览器打开的网页转图片，不稳定，需要写守护进程，而且因为需等待js渲染数学公式，速度极慢，平均6s一张图，用两个服务器跑了两三天的程序才跑完数学题目，但是效果较好）。'
         ],
         EN: [
-          'One more private project. I have no wechat code for this project, but you can manually search for keyword "咕咕机学习" in Wechat. There is one Wechat menu named "答案" (answers) which which we\'ll talk about later. Team composition: 3*backend + 1*frontend. Time consumed: about 1 month.',
+          'One more side project. I have no wechat code for this project, but you can manually search for keyword "咕咕机学习" in Wechat. There is one Wechat menu named "答案" (answers) which which we\'ll talk about later. Team composition: 3*backend + 1*frontend. Time consumed: about 1 month.',
           'Click "答案", type in question code such as 2100011, and press enter button, you will see a page with content like question, options, answer and explanation, also a bottom button which after clicked can print the current webpage using the printer you account is bound to.' +
           'Actually, we already had screenshots corresponding to these questions stored in the server. And the main technological difficulty I encountered is to get screenshots of maths questions where complicated math formula and images are involved. Finally, with the help of PhantomJS, the difficulty is solved.'
         ]
