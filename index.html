@@ -22,7 +22,7 @@
   </header>
 
   <article class="page-content">
-    <div :class="{'shine': showBody}" class="page-utilities clearfix text-center">
+    <div class="page-utilities clearfix text-center">
       <a href="./CV_Frontend_Yakima_CH.pdf" class="item float-left">{{l === 'CH' ? '中文简历下载' : 'Chinese CV Download'}}</a>
       <a @click.prevent="toggleLanguage" class="item">{{l === 'CH' ? 'English Version' : '中文版'}}</a>
       <a href="./CV_Frontend_Yakima_EN.pdf" class="item float-right">{{l === 'CH' ? '英文简历下载' : 'English CV Download'}}</a>
