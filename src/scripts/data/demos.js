@@ -152,7 +152,7 @@ const demos = {
           'A tool written in part time. It\'s purpose is to mock data in backend server to provide convenience for frontend development. You will not need to wait for backend developer anymore if your team can define data structure in advance of development. This small tools support <strong>request proxy, response using defined static JSON file, response using dynamic data (with the help of mockjs integrated)</strong>. For detail, please refer to the source code link above.'
         ]
       },
-      gitUrl: 'https://git.oschina.net/yakima/mock-server',
+      gitUrl: 'https://github.com/Yakima-Teng/mock-server',
       demoUrl: '',
       imgUrl: ''
     },
@@ -177,7 +177,7 @@ const demos = {
           'iframe boilerplate: appropriate for backend developers unfamiliar with new frontend skills, iframe + jQuery + handlebars + gulp. For details, please refer to: <a href="https://git.oschina.net/yakima/iframe-application">Source Code</a>.'
         ]
       },
-      gitUrl: 'https://git.oschina.net/yakima/demos',
+      gitUrl: 'https://github.com/Yakima-Teng/demos',
       demoUrl: 'http://www.yxeye.com/demos/index.html',
       imgUrl: 'img/react_boilerplate.png'
     }
