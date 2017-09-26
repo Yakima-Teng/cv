@@ -21123,7 +21123,7 @@ var basic = {
       CH: ['业余时间写的一个工具。用于服务器端数据模拟，方便前端工程师独立于后端进行开发。支持<strong>请求转发、响应静态JSON文件数据、响应自定义动态数据（内置mockjs）</strong>，详细说明请点击上面链接地址（<a href="https://git.oschina.net/yakima/mock-server">项目源码</a>）查看README.md文档'],
       EN: ['A tool written in part time. It\'s purpose is to mock data in backend server to provide convenience for frontend development. You will not need to wait for backend developer anymore if your team can define data structure in advance of development. This small tools support <strong>request proxy, response using defined static JSON file, response using dynamic data (with the help of mockjs integrated)</strong>. For detail, please refer to the source code link above.']
     },
-    gitUrl: 'https://git.oschina.net/yakima/mock-server',
+    gitUrl: 'https://github.com/Yakima-Teng/mock-server',
     demoUrl: '',
     imgUrl: ''
   }, {
@@ -21139,7 +21139,7 @@ var basic = {
       CH: ['Vue项目脚手架：根据Vue官方webpack模版改造出了一个vue2项目开发环境，vue2 + vue-router + vuex + webpack + ES6 support + babel + eslint，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/blog-admin">源代码</a>。', 'React项目脚手架：为了在开发react项目时能有和开发vue项，根据vue-cli webpack模版改编出了一个react项目开发环境，react + react-router + webpack + ES6 support + babel + eslint，预置了几个动画效果，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/demos">源代码</a>。', 'iframe项目脚手架：基于iframe + jQuery + handlebars + gulp实现的类SPA应用开发环境，适用于有对前端了解较少的后端同学需要一起参与前端开发工作的的项目，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/iframe-application">源代码</a>。'],
       EN: ['Vue boilerplate: base on Vue-cli official webpack template, vue2 + vue-router + vuex + webpack + ES6 support + babel + eslint. For details, please refer to: <a href="https://git.oschina.net/yakima/blog-admin">Source Code</a>.', 'React boilerplate: base on Vue boilerplate to provide similar development experience, react + react-router + webpack + ES6 support + babel + eslint. For details, please refer to <a href="https://git.oschina.net/yakima/demos">Source Code</a>.', 'iframe boilerplate: appropriate for backend developers unfamiliar with new frontend skills, iframe + jQuery + handlebars + gulp. For details, please refer to: <a href="https://git.oschina.net/yakima/iframe-application">Source Code</a>.']
     },
-    gitUrl: 'https://git.oschina.net/yakima/demos',
+    gitUrl: 'https://github.com/Yakima-Teng/demos',
     demoUrl: 'http://www.yxeye.com/demos/index.html',
     imgUrl: 'img/react_boilerplate.png'
   }]
