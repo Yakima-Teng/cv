@@ -21091,7 +21091,7 @@ var basic = {
       CH: ['个人项目，非私活。最早上线的是一个前端Angular SPA + 后端Node(Express框架)提供API接口的版本（数据库使用的是MySQL，模版引擎用的是EJS）。由于码云Pages功能上的限制，直接访问项目在线地址会被跳转，请手动复制以下地址（http://yakima.oschina.io/blog）到浏览器地址栏回车查看效果。后期考虑到SEO的问题，在后端用EJS作为模版重写了一版本，在线地址：<a href="http://www.yxeye.com/blog">http://www.yxeye.com/blog</a>。', 'Angular版本开发环境使用gulp，支持模版文件，请求转发等常见功能，发表评论的功能（支持<strong>嵌套评论</strong>）被我禁掉了，因为自己后端安全方面知识欠缺，数据库里的东西对我又很重要，开放这种往数据库里写数据的接口怕出问题。', '注册功能目前存在未解决的技术问题（与已有的wordpress程序创建的数据库打通账号），有一种方法是访问Wordpress提供的用户相关API，但是我想直接跟数据库里的账号信息进行比对，在把Wordpress保存的密码在Node端进行加解密这块卡住了。'],
       EN: ['Personal SPA project using Angular1. API is provided by backend server using Node(Express) and MySQL. For details, please refer to the source code link above. Later on, after SEO-related problems are considered, this project was rewritten in backend using EJS as the template language. For the rewritten version, please refer to: <a href="http://www.yxeye.com/blog">http://www.yxeye.com/blog</a>.', 'Development environment for the Angular1 version is established with gulp. Supports templates using mechanism of angular1 cache. Common functions like request proxy are also supported. Nested comments are supported but forbidden due to safety reason (database is very important to me).']
     },
-    gitUrl: 'https://git.oschina.net/yakima/blog',
+    gitUrl: 'https://github.com/Yakima-Teng/blog',
     demoUrl: '',
     imgUrl: 'img/post_English.png'
   }, {
@@ -21136,7 +21136,7 @@ var basic = {
       EN: 'react, vue, iframe+jQuery+handlebars, webpack，gulp'
     },
     description: {
-      CH: ['Vue项目脚手架：根据Vue官方webpack模版改造出了一个vue2项目开发环境，vue2 + vue-router + vuex + webpack + ES6 support + babel + eslint，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/blog-admin">源代码</a>。', 'React项目脚手架：为了在开发react项目时能有和开发vue项，根据vue-cli webpack模版改编出了一个react项目开发环境，react + react-router + webpack + ES6 support + babel + eslint，预置了几个动画效果，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/demos">源代码</a>。', 'iframe项目脚手架：基于iframe + jQuery + handlebars + gulp实现的类SPA应用开发环境，适用于有对前端了解较少的后端同学需要一起参与前端开发工作的的项目，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/iframe-application">源代码</a>。'],
+      CH: ['Vue项目脚手架：根据Vue官方webpack模版改造出了一个vue2项目开发环境，vue2 + vue-router + vuex + webpack + ES6 support + babel + eslint，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/blog-admin">源代码</a>。', 'React项目脚手架：为了在开发react项目时能有和开发vue项，根据vue-cli webpack模版改编出了一个react项目开发环境，react + react-router + redux + webpack + ES6 support + babel + eslint，预置了几个动画效果，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/demos">源代码</a>。', 'iframe项目脚手架：基于iframe + jQuery + handlebars + gulp实现的类SPA应用开发环境，适用于有对前端了解较少的后端同学需要一起参与前端开发工作的的项目，详细介绍请点击相关链接查看：<a href="https://git.oschina.net/yakima/iframe-application">源代码</a>。'],
       EN: ['Vue boilerplate: base on Vue-cli official webpack template, vue2 + vue-router + vuex + webpack + ES6 support + babel + eslint. For details, please refer to: <a href="https://git.oschina.net/yakima/blog-admin">Source Code</a>.', 'React boilerplate: base on Vue boilerplate to provide similar development experience, react + react-router + webpack + ES6 support + babel + eslint. For details, please refer to <a href="https://git.oschina.net/yakima/demos">Source Code</a>.', 'iframe boilerplate: appropriate for backend developers unfamiliar with new frontend skills, iframe + jQuery + handlebars + gulp. For details, please refer to: <a href="https://git.oschina.net/yakima/iframe-application">Source Code</a>.']
     },
     gitUrl: 'https://github.com/Yakima-Teng/demos',
@@ -21274,7 +21274,7 @@ var skills = {
 };var app = new Vue({
   el: 'html',
   data: {
-    l: 'EN',
+    l: 'CH',
     showBody: false,
     scrollOffset: 0,
     menus: menus,
@@ -21324,7 +21324,18 @@ var skills = {
     loadImage('./img/sky.jpg', function () {
       _this.showBody = true;
     });
-    this.l = window.localStorage.getItem('l') || 'EN';
+    this.l = function () {
+      var lang = window.navigator.language || window.navigator.userLanguage || '';
+      if (window.localStorage.getItem('l')) {
+        return window.localStorage.getItem('l');
+      } else if (lang && lang.substr(0, 2) === 'en') {
+        return 'EN';
+      } else if (lang && lang.substr(0, 2) === 'zh') {
+        return 'CH';
+      } else {
+        return 'EN';
+      }
+    }();
   },
   ready: function ready() {
     var _this = this;
