@@ -102,7 +102,7 @@ const demos = {
           'Development environment for the Angular1 version is established with gulp. Supports templates using mechanism of angular1 cache. Common functions like request proxy are also supported. Nested comments are supported but forbidden due to safety reason (database is very important to me).',
         ]
       },
-      gitUrl: 'https://git.oschina.net/yakima/blog',
+      gitUrl: 'https://github.com/Yakima-Teng/blog',
       demoUrl: '',
       imgUrl: 'img/post_English.png'
     },
