@@ -108,7 +108,6 @@
             <li v-for="x in footprints.details" class="item">
               <a :href="x.destinationUrl" class="card transition">
                 <span :style="{'background-image': 'url(' + x.imgUrl + ')'}" class="img"></span>
-                <!-- <img :data-original="x.imgUrl" :alt="x.title" class="lazy"> -->
                 <aside class="desc transition">{{x.title[l]}}</aside>
               </a>
             </li>

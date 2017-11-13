@@ -111,10 +111,6 @@ let app = new Vue({
 	}
 })
 
-$(document).ready(() => {
-  $('.lazy').lazyload()
-})
-
 function loadImage(url, callback) {
   const img = new Image()
   img.src = url
