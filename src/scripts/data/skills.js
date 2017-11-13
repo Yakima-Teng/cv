@@ -25,7 +25,7 @@ const skills = {
     },
     {
       desc: {
-        CH: '熟悉: webpack、gulp、vue/react全家桶（框架、路由、状态管理）、flow、typescript、jQuery、git、sublime text、IDEA',
+        CH: '熟悉: webpack、gulp、vue/react全家桶、flow、typescript、jQuery、git、sublime text、IDEA',
         EN: 'Familiar with: webpack, gulp, vue/react family, flow, typescript, jQuery, git, sublime, IDEA'
       }
     },

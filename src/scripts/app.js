@@ -28,25 +28,17 @@ let app = new Vue({
 		},
 		scroll (e) {
 			const element = e.currentTarget
-			const targetId = $(element).prop('href').split('#')[1]
+			const targetId = element.href.split('#')[1]
 			const { scrollOffset } = this
-			$('html,body').animate({
-				scrollTop: $('#' + targetId).position().top + scrollOffset + 'px'
-			}, 300, () => {
-			// Animation complete
-			})
+			document.querySelector('html').scrollTop = document.querySelector('#' + targetId).offsetTop + scrollOffset
 		}
 	},
 	events: {
 		leaveTop () {
-			$('.page-header nav').css({
-				'background-color': 'rgba(220, 190, 190, .6)'
-			})
+			document.querySelector('.page-header nav').style.backgroundColor = 'rgba(220, 190, 190, .6)'
 		},
 		onTop () {
-			$('.page-header nav').css({
-				'background-color': 'rgba(0, 0, 0, .6)'
-			})
+			document.querySelector('.page-header nav').style.backgroundColor = 'rgba(0, 0, 0, .6)'
 		}
 	},
 	created () {
@@ -70,7 +62,7 @@ let app = new Vue({
 	ready () {
 		const _this = this
 		function scrollCallback () {
-      if ($(window).scrollTop() > 0) {
+      if (document.querySelector('html').scrollTop > 0) {
         app.$emit('leaveTop');
       } else {
         app.$emit('onTop');
@@ -78,7 +70,7 @@ let app = new Vue({
 		}
 
 		function resizeCallback () {
-      if ($(window).width() >= 980) {
+      if (window.innerWidth >= 980) {
         _this.scrollOffset = 90
       } else {
         _this.scrollOffset = -18
@@ -86,28 +78,28 @@ let app = new Vue({
 		}
 
 		let timerForScroll = null
-		$(window).scroll(() => {
-			if (timerForScroll) {
-				clearTimeout(timerForScroll)
-			}
-			timerForScroll = setTimeout(() => {
+		window.addEventListener('scroll', () => {
+      if (timerForScroll) {
+        clearTimeout(timerForScroll)
+      }
+      timerForScroll = setTimeout(() => {
         scrollCallback()
-			}, 250)
-		})
+      }, 250)
+		}, false)
 		let timerForResize = null
-		$(window).resize(() => {
-			if (timerForResize) {
-				clearTimeout(timerForResize)
-			}
-			timerForResize = setTimeout(() => {
+		window.addEventListener('resize', () => {
+      if (timerForResize) {
+        clearTimeout(timerForResize)
+      }
+      timerForResize = setTimeout(() => {
         resizeCallback()
-			}, 250)
-		})
+      }, 250)
+		}, false)
 
-		$(window).load(() => {
-			scrollCallback()
-			resizeCallback()
-		})
+		window.addEventListener('load', () => {
+      scrollCallback()
+      resizeCallback()
+		}, false)
 	}
 })
 
