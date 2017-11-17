@@ -9,7 +9,9 @@
     "deployToServer": "grunt deploy",
     "deployToGithub": "gh-pages -d dist/cv",
     "deployToOSChina": "gh-pages -d dist/cv -b oschina-pages -o oschina -r https://git.oschina.net/yakima/cv.git",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "assume-unchanged": "git update-index --assume-unchanged ./gruntfile.js",
+    "no-assume-unchanged": "git update-index --no-assume-unchanged ./gruntfile.js"
   },
   "repository": {
     "type": "git",
