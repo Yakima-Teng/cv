@@ -71,7 +71,7 @@ module.exports = function (grunt) {
       },
       dist: {
         // the files to concatenate
-        src: [SOURCE + 'libs/jquery-1.12.4.js', SOURCE + 'libs/jquery.lazyload.js', SOURCE + 'libs/vue.js', SOURCE + 'scripts/temp/concat.babel.js'],
+        src: [SOURCE + 'libs/vue.js', SOURCE + 'scripts/temp/concat.babel.js'],
         // the location of the resulting JS file
         dest: DEST + 'js/app.js'
       }
@@ -108,6 +108,25 @@ module.exports = function (grunt) {
         files: {
           [DEST + 'css/app.min.css']: SOURCE + 'styles/app.less'
         }
+      }
+    },
+    htmlrefs: {
+      dist: {
+        expand: true,
+        src: [SOURCE + '**/*.html'],
+        dest: DEST,
+        options: {
+          buildVersion: (function () {
+            function toDouble (n) {
+              return n < 10 ? '0' + n : '' + n
+            }
+            var d = new Date()
+            return '' + d.getFullYear() + toDouble(d.getMonth()) + toDouble(d.getDate()) +
+              toDouble(d.getHours()) + toDouble(d.getMinutes()) + toDouble(d.getSeconds())
+          })()
+        },
+        flatten: true,
+        filter: 'isFile'
       }
     },
     copy: {
@@ -206,7 +225,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('css', ['less'])
 
-  grunt.registerTask('html', ['copy:main'])
+  grunt.registerTask('html', ['htmlrefs:dist'])
 
   grunt.registerTask('cv', ['copy:cv'])
 
