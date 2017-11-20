@@ -9735,8 +9735,8 @@ var basic = {
       EN: 'Contact'
     },
     details: {
-      CH: ['veryplans [AT] gmail.com', '184-5801-9856（金华）', '滕运锋'],
-      EN: ['veryplans [AT] gmail.com', '184-5801-9856', 'Yakima Teng']
+      CH: ['cleveryun [AT] 163.com', '184-5801-9856（金华）', '滕运锋'],
+      EN: ['cleveryun [AT] 163.com', '184-5801-9856', 'Yakima Teng']
 
     }
   }]
