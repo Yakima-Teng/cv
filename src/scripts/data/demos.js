@@ -237,7 +237,7 @@ const demos = {
       description: {
         CH: [
           '为了在开发react项目时能有和开发vue项目一样的开发体验，根据vue-cli webpack模版改编出了一个react项目开发环境，预置了几个好看的动画效果。',
-          '技术栈：react + react-router + redux + webpack + ES6 support + eslint'
+          '技术栈：react + react-router + webpack + ES6 support + eslint'
         ],
         EN: [
           'Base on Vue-cli webpack template to provide similar development experience.',
