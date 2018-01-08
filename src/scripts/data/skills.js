@@ -7,33 +7,51 @@ const skills = {
   items: [
     {
       desc: {
-        CH: '近2年VueJS微信端SPA开发经验，熟悉微信JSSDK，有Angular1项目重构经验，参与过一个React Native项目',
-        EN: 'Skilled in VueJS, familiar with Wechat development，have production experience with Angular1/React Native'
+        CH: '熟悉vue（2年），能独立搭建和开发vue、react全家桶项目（均有上线项目）；',
+        EN: 'Familiar with Vue (2 years), able to independently develop projects using vue and react;'
       }
     },
     {
       desc: {
-        CH: '编程纠错：能根据需要自行搭建开发环境，定位bug的能力较强，知道如何抓包和调试webview内嵌页面',
-        EN: 'Able to set up development environment independently using gulp/webpack'
+        CH: '熟练PS切图、手写CSS样式，能较好地对设计稿进行还原；',
+        EN: 'Skilled in PS cutting and handwriting css, able to implement UI effect;'
       }
     },
     {
       desc: {
-        CH: '样式：CSS/LESS，手写，PS/Sketch切图利索，量取认真，尽可能99%还原设计稿样式',
-        EN: 'Skilled in hand-writing CSS, responsive design, flex box and animation'
+        CH: '能使用构建工具根据业务、人员情况搭建开发环境（JS+SASS编译、自刷、发布、转发请求等）；',
+        EN: 'Able to establish development environment taking business and human resource into consideration;'
       }
     },
     {
       desc: {
-        CH: '熟悉: webpack、gulp、vue/react全家桶、flow、typescript、jQuery、git、sublime text、IDEA',
-        EN: 'Familiar with: webpack, gulp, vue/react family, flow, typescript, jQuery, git, sublime, IDEA'
+        CH: '能独立在Centos服务器上安装部署Nginx和Node项目；',
+        EN: 'Able to install and deploy nginx and node project in Centos system;'
       }
     },
     {
       desc: {
-        CH: '其他：能在MAC OS下熟练开发，能用Express+MySql开发简单的博客系统并部署到Linux服务器上',
-        EN: 'Comfortable with development in MAC OS, able to build simple backend server using Express and MySQL'
+        CH: '会写简单的SQL。熟练阅读英文资料，独立解决问题；',
+        EN: 'Able to write simple SQL. Good at reading English article, searching, and able to solve most problem independently;'
       }
-    }
+    },
+    {
+      desc: {
+        CH: '用node写过Mock Server、简单的微信公众号服务、含数学公式的网页批量截图、爬虫；',
+        EN: 'Have write mock server, simple wechat public account server, webpage batch screening, crawaler;'
+      }
+    },
+    // {
+    //   desc: {
+    //     CH: '轻微代码洁癖，不太能接受不用代码风格检测工具的项目，接了会强改代码加上的；',
+    //     EN: ''
+    //   }
+    // },
+    // {
+    //   desc: {
+    //     CH: '如果可能，喜欢一个人写一个项目但是可以互看代码的团队，因为基本上1+1是小于2的。',
+    //     EN: ''
+    //   }
+    // },
   ]
 }
