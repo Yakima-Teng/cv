@@ -5,7 +5,7 @@
  ***********************************************************************************/
 
 const basic = {
-  title: '教育经历',
+  title: '基本信息',
   description: '',
   note: '',
   items: [
@@ -17,15 +17,13 @@ const basic = {
       details: {
         CH: [
           '前端开发，18k+',
-          '坐标上海，非996，非外包',
-          '离顾村公园／共富新村越近越好^_^',
-          '喜欢麻雀虽小五脏俱全的团队'
+          '坐标上海，7号线附近最好^_^',
+          '良好的团队氛围'
         ],
         EN: [
           'Frontend development, 18k+',
-          'Base Shanghai',
-          'No 996, not outsourced project',
-          'Friendly colleagues ^_^'
+          'Base Shanghai, better if near line 7',
+          'Friendly colleagues'
         ]
       }
     },

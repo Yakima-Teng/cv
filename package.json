@@ -1,5 +1,5 @@
 {
-  "name": "CV",
+  "name": "cv",
   "version": "1.0.0",
   "description": "Yakima Teng's CV as a Web Front-end Engineer",
   "main": "index.js",
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://git.oschina.net/yakima/cv.git"
   },
-  "author": "",
+  "author": "cleveryun@163.com",
   "license": "ISC",
   "bugs": {
     "url": "https://git.oschina.net/yakima/cv/issues"
