@@ -9735,9 +9735,8 @@ var basic = {
       EN: 'Contact'
     },
     details: {
-      CH: ['cleveryun [AT] 163.com', '184-5801-9856（金华）', '滕运锋'],
-      EN: ['cleveryun [AT] 163.com', '184-5801-9856', 'Yakima Teng']
-
+      CH: ['邮箱：cleveryun [AT] 163.com', '手机：184-5801-9856（金华）', 'QQ: 821135564', '微信：OrzZone', '滕运锋'],
+      EN: ['Email: cleveryun [AT] 163.com', 'Tel.: 184-5801-9856', 'QQ: 821135564', 'Wechat: OrzZone', 'Yakima Teng']
     }
   }]
   /***********************************************************************************
