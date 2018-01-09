@@ -7,6 +7,12 @@ const skills = {
   items: [
     {
       desc: {
+        CH: '写得了原生，也熟悉jQuery，有较丰富的代码封装和重构经验；',
+        EN: 'Familiar with vanilla JS and jQuery, experienced in code encapsulation and refactoring;'
+      }
+    },
+    {
+      desc: {
         CH: '熟悉vue（2年），能独立搭建和开发vue、react全家桶项目（均有上线项目）；',
         EN: 'Familiar with Vue (2 years), able to independently develop projects using vue and react;'
       }
