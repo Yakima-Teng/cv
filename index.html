@@ -12,7 +12,7 @@
   <meta http-equiv="Expires" content="0">
   <link rel="shortcut icon" href="img/favicon.ico">
   <noscript>您的浏览器不支持JavaScript或者JavaScript的运行被您禁止了。</noscript>
-  <link rel="stylesheet" href="css/app.min.css?v=20180009211636">
+  <link rel="stylesheet" href="css/app.min.css?v=20180009213210">
 </head>
 <body :class="{'show-body': showBody}" class="body transition">
   <header class="page-header">
@@ -28,9 +28,9 @@
 
   <article class="page-content">
     <div class="page-utilities clearfix text-center">
-      <a href="./CV_Frontend_Yakima_CH.pdf" class="item float-left">{{l === 'CH' ? '中文简历下载' : 'Chinese CV Download'}}</a>
+      <a href="./CV_Frontend_Yakima_CH_HR.pdf" class="item float-left">{{l === 'CH' ? '中文简历下载' : 'Chinese CV Download'}}</a>
       <a @click.prevent="toggleLanguage" class="item">{{l === 'CH' ? 'English Version' : '中文版'}}</a>
-      <a href="./CV_Frontend_Yakima_EN.pdf" class="item float-right">{{l === 'CH' ? '英文简历下载' : 'English CV Download'}}</a>
+      <a href="javascript:void(0);" class="item float-right">{{l === 'CH' ? '英文简历下载' : 'English CV Download'}}</a>
     </div>
     <section v-for="(index, item) in menus" class="page-section">
       <aside class="section-sidebar">
@@ -121,10 +121,10 @@
       </template>
     </section>
 
-    <div class="shut">{{l === 'CH' ? '暂无跳槽意向...' : 'Not Open Now...'}}</div>
+    <div class="shut">{{l === 'CH' ? '两周左右入职...' : 'In two weeks...'}}</div>
   </article> <!--结束section#frames-->
 
   <div class="decoration"></div>
-  <script src="js/app.min.js?v=20180009211636"></script>
+  <script src="js/app.min.js?v=20180009213210"></script>
 </body>
 </html>
