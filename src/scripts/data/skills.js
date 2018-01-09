@@ -37,8 +37,8 @@ const skills = {
     },
     {
       desc: {
-        CH: '会写简单的SQL。熟练阅读英文资料，独立解决问题；',
-        EN: 'Able to write simple SQL. Good at reading English article, searching, and able to solve most problem independently;'
+        CH: '熟练阅读英文资料，独立解决问题；',
+        EN: 'Good at reading English article, searching, and able to solve most problem independently;'
       }
     },
     {
