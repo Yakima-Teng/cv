@@ -95,7 +95,7 @@ module.exports = function (grunt) {
           paths: [SOURCE + 'styles/app.less'],
           plugins: [
             new (require('less-plugin-autoprefix'))({
-              browsers: ['last 2 versions']
+              browsers: ['last 20 versions']
             }),
             // compress css files
             new (require('less-plugin-clean-css'))({
@@ -122,8 +122,8 @@ module.exports = function (grunt) {
             function toDouble (n) {
               return n < 10 ? '0' + n : '' + n
             }
-            var d = new Date()
-            return '' + d.getFullYear() + toDouble(d.getMonth()) + toDouble(d.getDate()) +
+            const d = new Date()
+            return '' + d.getFullYear() + toDouble(d.getMonth() + 1) + toDouble(d.getDate()) +
               toDouble(d.getHours()) + toDouble(d.getMinutes()) + toDouble(d.getSeconds())
           })()
         },
