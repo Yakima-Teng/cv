@@ -16,13 +16,13 @@ const basic = {
       },
       details: {
         CH: [
-          '前端开发，18k+',
-          '坐标上海，7号线附近最好^_^',
+          '前端开发',
+          '坐标上海',
           '良好的团队氛围'
         ],
         EN: [
-          'Frontend development, 18k+',
-          'Base Shanghai, better if near line 7',
+          'Frontend development, 24k+',
+          'Base Shanghai',
           'Friendly colleagues'
         ]
       }
@@ -53,14 +53,14 @@ const basic = {
       },
       details: {
         CH: [
-          '邮箱：cleveryun [AT] 163.com',
+          '邮箱：veryplans [AT] gmail.com',
           '手机：184-5801-9856（金华）',
           'QQ: 821135564',
           '微信：OrzZone',
           '滕运锋'
         ],
         EN: [
-          'Email: cleveryun [AT] 163.com',
+          'Email: veryplans [AT] gmail.com',
           'Tel.: 184-5801-9856',
           'QQ: 821135564',
           'Wechat: OrzZone',

@@ -31,8 +31,8 @@ const skills = {
     },
     {
       desc: {
-        CH: '能独立在Centos服务器上安装部署Nginx和Node项目；',
-        EN: 'Able to install and deploy nginx and node project in Centos system;'
+        CH: '能独立在CentOS服务器上安装部署Nginx和Node项目；',
+        EN: 'Able to install and deploy nginx and node project in CentOS system;'
       }
     },
     {
@@ -46,18 +46,6 @@ const skills = {
         CH: '用node写过Mock Server、简单的微信公众号服务、含数学公式的网页批量截图、爬虫；',
         EN: 'Have write mock server, simple wechat public account server, webpage batch screening, crawaler;'
       }
-    },
-    // {
-    //   desc: {
-    //     CH: '轻微代码洁癖，不太能接受不用代码风格检测工具的项目，接了会强改代码加上的；',
-    //     EN: ''
-    //   }
-    // },
-    // {
-    //   desc: {
-    //     CH: '如果可能，喜欢一个人写一个项目但是可以互看代码的团队，因为基本上1+1是小于2的。',
-    //     EN: ''
-    //   }
-    // },
+    }
   ]
 }
