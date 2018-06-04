@@ -1,0 +1,7 @@
+{
+  "host": "222.22.22.22",
+  "port": 22,
+  "username": "username",
+  "password": "password",
+  "dest": "/var/www/path"
+}

@@ -1,3 +1,5 @@
+const config = require('./config')
+
 module.exports = function (grunt) {
   var SOURCE = './src/'
   var WWW = 'dist/'
@@ -12,10 +14,10 @@ module.exports = function (grunt) {
     clean: [WWW],
     scp: {
       options: {
-        host: '222.22.22.22',
-        port: 22,
-        username: 'username',
-        password: 'password'
+        host: config.host,
+        port: config.port,
+        username: config.username,
+        password: config.password
       },
       your_target: {
         files: [
@@ -25,7 +27,7 @@ module.exports = function (grunt) {
             src: '**/*',
             filter: 'isFile',
             // path on the server
-            dest: '/var/www/html/yxeye.com/public_html/yakima/public/projects'
+            dest: config.dest
           }
         ]
       }
