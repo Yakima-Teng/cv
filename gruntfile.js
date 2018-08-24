@@ -17,7 +17,8 @@ module.exports = function (grunt) {
         host: config.host,
         port: config.port,
         username: config.username,
-        password: config.password
+        password: config.password,
+        readyTimeout: 600000
       },
       your_target: {
         files: [
