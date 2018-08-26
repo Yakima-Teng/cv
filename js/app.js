@@ -9717,8 +9717,8 @@ var basic = {
       EN: 'Job Objective'
     },
     details: {
-      CH: ['前端开发，18k+', '坐标上海，7号线附近最好^_^', '良好的团队氛围'],
-      EN: ['Frontend development, 18k+', 'Base Shanghai, better if near line 7', 'Friendly colleagues']
+      CH: ['前端开发', '坐标上海', '良好的团队氛围'],
+      EN: ['Frontend development, 24k+', 'Base Shanghai', 'Friendly colleagues']
     }
   }, {
     title: {
@@ -9735,8 +9735,8 @@ var basic = {
       EN: 'Contact'
     },
     details: {
-      CH: ['邮箱：cleveryun [AT] 163.com', '手机：184-5801-9856（金华）', 'QQ: 821135564', '微信：OrzZone', '滕运锋'],
-      EN: ['Email: cleveryun [AT] 163.com', 'Tel.: 184-5801-9856', 'QQ: 821135564', 'Wechat: OrzZone', 'Yakima Teng']
+      CH: ['邮箱：veryplans [AT] gmail.com', '手机：184-5801-9856（金华）', 'QQ: 821135564', '微信：OrzZone', '滕运锋'],
+      EN: ['Email: veryplans [AT] gmail.com', 'Tel.: 184-5801-9856', 'QQ: 821135564', 'Wechat: OrzZone', 'Yakima Teng']
     }
   }]
   /***********************************************************************************
@@ -9946,7 +9946,7 @@ var basic = {
   note: '',
   items: [{
     title: '求职意向',
-    details: ['前端开发，18k+', '坐标上海，非996，非外包', '离顾村公园／共富新村越近越好^_^']
+    details: ['前端开发', '坐标上海', '离顾村公园／共富新村越近越好^_^']
   }, {
     title: '个人简介',
     details: ['男，91年，浙江人', '喜欢看书、写博、打羽毛球', 'veryplans@gmail.com', '184-5801-9856（金华）']
@@ -10054,8 +10054,8 @@ var skills = {
     }
   }, {
     desc: {
-      CH: '能独立在Centos服务器上安装部署Nginx和Node项目；',
-      EN: 'Able to install and deploy nginx and node project in Centos system;'
+      CH: '能独立在CentOS服务器上安装部署Nginx和Node项目；',
+      EN: 'Able to install and deploy nginx and node project in CentOS system;'
     }
   }, {
     desc: {
