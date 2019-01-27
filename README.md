@@ -30,7 +30,7 @@ And that's all.
 
 ## Development
 
-Please be informed that, before you start to develop, there is an optional step you can do if you want to deploy your work to an SFTP-available server more easily: you can rename the `config-example.json` file, and change the content to suit yours. This is an optional step, which means that it won't influence the actual development process.
+Please be informed that, before you start to develop, there is an optional step you can do if you want to deploy your work to an SFTP-available server more easily: you can copy and rename the `config-example.json` file to be `config.json`, and change the content to suit yours. This is an optional step, which means that it won't influence the actual development process.
 
 Type the following command to start the development process, it will open a webpage in your browser and refresh the page automatically when changes to your development files are detected.
 
@@ -40,7 +40,7 @@ npm run dev
 
 ## Deploy to server through sftp
 
-Script like 'npm run deploy' defined in the package.json file won't be available at your first use. You need to open gruntfile.js and revise configuration under scp.options and scp.your_target to make it available. One small tip here:
+Script like 'npm run deploy' defined in the package.json file won't be available at your first use. You need to copy and rename `config-example.json` to `config.json` and revise the content to  to make it available. One small tip here:
 Before you make any changes under the key "scp", you can first cd to your project root and then use the command below to avoid committing and pushing your local private information to the remote repository accidentally:
 ```bash
 git update-index --assume-unchanged gruntfile.js
@@ -65,7 +65,7 @@ I employed a npm package named "gh-pages", please visit its official websites fo
 
 ## Notes
 
-1. Tools: Grunt, VueJS1+ (actually, I am in favor of gulp and webpack other then grunt, it seems to be too slow in action speed -_-. I used it here because I havn't had any experience of its usage before.)
+1. Tools: Grunt, VueJS1+ (actually, I am in favor of gulp and webpack other then grunt, it seems to be too slow in action speed -_-. I used it here because I haven't had any experience of its usage before.)
 2. Online demo: [http://www.yxeye.com/cv/](http://www.yxeye.com/cv/)
 
 ## License
