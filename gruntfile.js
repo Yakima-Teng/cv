@@ -1,4 +1,14 @@
-const config = require('./config')
+const config = (() => {
+  try {
+    return require('./config')
+  } catch (e) {
+    if (e.message.indexOf('Cannot find module \'./config\'') !== -1) {
+      // tell developer the optional configuration file for deployment
+      console.log("\x1b[33m%s\x1b[0m" ,"If you want to deploy your work to an sftp-available server, you can rename `config-example.json` and change the content to suit yours.")
+    }
+    return {}
+  }
+})()
 
 module.exports = function (grunt) {
   var SOURCE = './src/'

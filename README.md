@@ -30,7 +30,10 @@ And that's all.
 
 ## Development
 
+Please be informed that, before you start to develop, there is an optional step you can do if you want to deploy your work to an SFTP-available server more easily: you can rename the `config-example.json` file, and change the content to suit yours. This is an optional step, which means that it won't influence the actual development process.
+
 Type the following command to start the development process, it will open a webpage in your browser and refresh the page automatically when changes to your development files are detected.
+
 ```bash
 npm run dev
 ```
