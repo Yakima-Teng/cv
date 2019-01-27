@@ -16,6 +16,18 @@ What this CV looks like in mobile device:
 
 Established by Yakima Teng
 
+## Installation
+
+If you are trying to start this project in China mainland, and in case that you do not plan to use VPN tools, it's strongly recommended that you use the taobao npm mirror registry (https://registry.npm.taobao.org) instead of the default one (https://registry.npmjs.org). All this has already been done, so you don't have to do anything.
+
+To change the mirror registry address (in case you prefer other mirror registry than the taobao mirror registry), you should do the followings:
+
+1. open file `package-lock.json`, and replace all `https://registry.npm.taobao.org` with your target mirror registry address;
+
+2. open file `.npmrc`, and replace `https://registry.npm.taobao.org` with your target mirror registry address.
+
+And that's all.
+
 ## Development
 
 Type the following command to start the development process, it will open a webpage in your browser and refresh the page automatically when changes to your development files are detected.
