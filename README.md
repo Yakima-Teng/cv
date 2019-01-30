@@ -65,8 +65,8 @@ I employed a npm package named "gh-pages", please visit its official websites fo
 
 ## Notes
 
-1. Tools: Grunt, VueJS1+ (actually, I am in favor of gulp and webpack other then grunt, it seems to be too slow in action speed -_-. I used it here because I haven't had any experience of its usage before.)
-2. Online demo: [http://www.yxeye.com/cv/](http://www.yxeye.com/cv/)
+1. Tools: Grunt, VueJS1+ (actually, I am in favor of gulp and webpack other then grunt, it seems to be too slow in action speed -_-. I used it here because I havn't had any experience of its usage before.)
+2. Online demo: [http://www.orzzone.com/projects/cv/](http://www.orzzone.com/projects/cv/)
 
 ## License
 
